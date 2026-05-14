@@ -7,72 +7,61 @@ const heroCtaUrl = buildWhatsAppUrl(
 ---
 
 <section
-  class="ateb-grid-pattern relative overflow-hidden pb-14 pt-[clamp(1.75rem,4vw,4rem)] md:pb-[150px]"
+  class="ateb-grid-pattern relative overflow-hidden pb-16 pt-[clamp(2rem,5vw,4rem)] md:pb-24"
   id="hero"
 >
   <div
     class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_22%,rgba(179,209,51,0.18),transparent_24%),radial-gradient(circle_at_70%_30%,rgba(179,209,51,0.14),transparent_22%),radial-gradient(circle_at_86%_72%,rgba(77,72,55,0.08),transparent_20%)]"
     aria-hidden="true"
-  >
-  </div>
+  ></div>
 
   <div class="ateb-container relative">
-    <div
-      class="mx-auto grid max-w-[980px] justify-items-center gap-8 text-center"
-    >
+    <div class="mx-auto grid max-w-[980px] justify-items-center gap-7 text-center">
       <span class="ateb-kicker bg-white/55">
         Consultoria ERP especializada
       </span>
 
-      <h1
-        class="font-sora max-w-[20ch] text-[clamp(2rem,4.5vw,3.75rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark"
-      >
+      <h1 class="font-sora max-w-[20ch] text-[clamp(2rem,5vw,3.75rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
         Consultoria em ERP TOTVS, Protheus, RM, Fluig e Sankhya para transformar
         processos em performance
       </h1>
 
-      <div class="">
+      <div class="w-full max-w-[520px]">
         <img
           src="/images/hero.webp"
           alt="Imagem institucional da ATEB Soluções"
           loading="eager"
           fetchpriority="high"
-          class=" max-w-[480px] object-contain "
+          class="mx-auto h-auto w-full max-w-[480px] object-contain"
         />
       </div>
 
-      <div class="">
-        <p
-          class="text-[clamp(1.08rem,1.55vw,1.25rem)] leading-[1.7] text-[rgba(77,72,55,0.84)]"
-        >
+      <div class="grid max-w-[760px] gap-4 px-1">
+        <p class="text-[clamp(1rem,2.5vw,1.18rem)] leading-[1.7] text-[rgba(77,72,55,0.84)]">
           Sua empresa usa ERP, mas ainda depende de controles manuais,
           retrabalho, planilhas paralelas ou processos pouco integrados?
         </p>
 
-        <p
-          class="text-[clamp(1.08rem,1.55vw,1.25rem)] leading-[1.7] text-[rgba(77,72,55,0.84)]"
-        >
+        <p class="text-[clamp(1rem,2.5vw,1.18rem)] leading-[1.7] text-[rgba(77,72,55,0.84)]">
           A ATEB Soluções apoia empresas na consultoria em sistemas ERP,
           automação de processos, implantação, parametrização, customização e
           integração de soluções como TOTVS RM, TOTVS Protheus, TOTVS Fluig e
           Sankhya.
         </p>
 
-        <p
-          class="text-[clamp(1.08rem,1.55vw,1.25rem)] leading-[1.7] text-[rgba(77,72,55,0.84)]"
-        >
+        <p class="text-[clamp(1rem,2.5vw,1.18rem)] leading-[1.7] text-[rgba(77,72,55,0.84)]">
           Com mais de 20 anos de experiência em projetos de ERP e automação,
           ajudamos sua operação a ganhar mais controle, produtividade e
           organização.
         </p>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-4 pt-2">
+      <div class="flex w-full flex-wrap justify-center gap-4 pt-2 sm:w-auto">
         <a
           href={heroCtaUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="ateb-button-primary px-7 py-3.5 text-base"
+          class="ateb-button-primary w-full px-7 py-3.5 text-center text-base sm:w-auto"
         >
           Solicitar diagnóstico estratégico
         </a>
