@@ -329,7 +329,7 @@ import { siteConfig } from "../../config/siteConfig.js";
   </div>
 </section>
 
-<script>
+<script define:vars={{ whatsappNumber: siteConfig.whatsappNumber }}>
   const form = document.querySelector("[data-whatsapp-form]");
 
   form?.addEventListener("submit", (event) => {
@@ -355,9 +355,9 @@ import { siteConfig } from "../../config/siteConfig.js";
     ].join("\n");
 
     window.open(
-      `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(message)}`,
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
       "_blank",
-      "noopener,noreferrer",
+      "noopener,noreferrer"
     );
   });
 </script>
