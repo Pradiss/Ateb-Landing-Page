@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { siteConfig } from "../config/siteConfig.js";
+
+const pageTitle = `Politica de Privacidade | ${siteConfig.siteName}`;
+const pageDescription =
+  "Saiba como a ATEB Solucoes trata os dados compartilhados pelos visitantes do site.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <main class="ateb-section">
+    <section class="ateb-container">
+      <div class="ateb-card grid gap-8 p-6 md:p-10">
+        <div class="grid gap-4">
+          <span class="ateb-kicker">Legal</span>
+          <h1 class="ateb-section-title max-w-[12ch]">
+            Politica de Privacidade
+          </h1>
+          <p class="ateb-section-text max-w-[72ch]">
+            Esta pagina explica de forma objetiva como a {siteConfig.businessName}
+            trata as informacoes compartilhadas por visitantes e clientes em seus
+            canais digitais.
+          </p>
+        </div>
+
+        <div class="grid gap-6">
+          <section class="grid gap-3">
+            <h2 class="font-display text-2xl font-bold tracking-[-0.03em] text-ateb-dark">
+              1. Dados que podem ser coletados
+            </h2>
+            <p class="ateb-section-text">
+              Podemos receber nome, telefone, e-mail, empresa e outras
+              informacoes enviadas voluntariamente em formularios, contatos por
+              WhatsApp ou interacoes comerciais.
+            </p>
+          </section>
+
+          <section class="grid gap-3">
+            <h2 class="font-display text-2xl font-bold tracking-[-0.03em] text-ateb-dark">
+              2. Finalidade do uso
+            </h2>
+            <p class="ateb-section-text">
+              Os dados sao utilizados para responder solicitacoes, apresentar
+              servicos, conduzir atendimentos comerciais e melhorar a experiencia
+              de navegacao e relacionamento com a empresa.
+            </p>
+          </section>
+
+          <section class="grid gap-3">
+            <h2 class="font-display text-2xl font-bold tracking-[-0.03em] text-ateb-dark">
+              3. Compartilhamento
+            </h2>
+            <p class="ateb-section-text">
+              A {siteConfig.businessName} nao comercializa dados pessoais. O
+              compartilhamento pode ocorrer apenas quando necessario para a
+              operacao do atendimento, cumprimento de obrigacoes legais ou uso de
+              ferramentas tecnicas de suporte ao site e ao relacionamento.
+            </p>
+          </section>
+
+          <section class="grid gap-3">
+            <h2 class="font-display text-2xl font-bold tracking-[-0.03em] text-ateb-dark">
+              4. Direitos do titular
+            </h2>
+            <p class="ateb-section-text">
+              O titular pode solicitar atualizacao, correcao ou exclusao de dados
+              pessoais, quando aplicavel, pelos canais de contato informados neste
+              site.
+            </p>
+          </section>
+
+          <section class="grid gap-3">
+            <h2 class="font-display text-2xl font-bold tracking-[-0.03em] text-ateb-dark">
+              5. Contato
+            </h2>
+            <p class="ateb-section-text">
+              Para assuntos relacionados a privacidade, entre em contato pelo
+              e-mail {siteConfig.emails[0]} ou pelo telefone {siteConfig.phones[0]}.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

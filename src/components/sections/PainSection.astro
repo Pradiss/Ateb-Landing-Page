@@ -1,0 +1,51 @@
+---
+const painPoints = [
+  "Processos manuais fora do ERP",
+  "Falta de integracao entre areas",
+  "Informacoes duplicadas ou inconsistentes",
+  "Baixa adesao dos usuarios ao sistema",
+  "Fluxos de aprovacao lentos",
+  "Falta de rastreabilidade nas rotinas",
+  "Dificuldade para gerar indicadores confiaveis",
+  "Dependencia excessiva de planilhas e controles paralelos",
+];
+---
+
+<section class="ateb-section">
+  <div class="ateb-container">
+    <div class="grid gap-6 rounded-[2rem] bg-ateb-dark px-6 py-8 text-white shadow-[0_24px_60px_rgba(29,18,10,0.16)] lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-10">
+      <div class="grid gap-5">
+        <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.12em] text-white">
+          Dor e problema
+        </span>
+
+        <h2 class="font-sora text-[clamp(2rem,4vw,3.15rem)] font-extrabold leading-[1.08] tracking-[-0.05em] text-white">
+          Seu ERP deveria facilitar a operacao, nao criar mais retrabalho
+        </h2>
+
+        <p class="max-w-[58ch] text-[1.02rem] leading-[1.75] text-white/75">
+          Muitas empresas investem em sistemas robustos, mas continuam
+          enfrentando problemas como processos manuais fora do ERP, falta de
+          integracao entre areas, informacoes duplicadas ou inconsistentes e
+          dificuldade para gerar indicadores confiaveis.
+        </p>
+
+        <p class="max-w-[58ch] text-[1.02rem] leading-[1.75] text-white/75">
+          Quando o ERP nao esta aderente a realidade da empresa, a tecnologia
+          deixa de ser uma aliada e passa a limitar a produtividade. A ATEB
+          Solucoes atua para corrigir esse caminho.
+        </p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        {painPoints.map((item) => (
+          <div class="rounded-[1.35rem] border border-white/10 bg-white/[0.06] px-5 py-4 backdrop-blur-sm">
+            <p class="text-sm font-semibold leading-6 text-white/90">
+              {item}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

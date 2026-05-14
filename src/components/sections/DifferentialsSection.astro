@@ -1,0 +1,130 @@
+---
+const differentiators = [
+  {
+    title: "Experiência real em ERP",
+    text: "Mais de 20 anos de vivência em projetos, consultoria, implantação e melhoria de sistemas de gestão.",
+    icon: `<circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path>`,
+  },
+  {
+    title: "Visão técnica com visão de negócio",
+    text: "A ATEB entende que tecnologia só faz sentido quando melhora a operação de verdade.",
+    icon: `<path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-4 3 3 5-7"></path>`,
+  },
+  {
+    title: "Atuação consultiva",
+    text: "Cada projeto começa com entendimento do cenário antes da recomendação de soluções.",
+    icon: `<path d="M12 3 4 7l8 4 8-4-8-4Z"></path><path d="M4 12l8 4 8-4"></path><path d="M4 16l8 4 8-4"></path>`,
+  },
+  {
+    title: "Foco em entrega",
+    text: "O posicionamento da marca é direto: entregar o que foi ofertado com consistência e resultado.",
+    icon: `<path d="m5 13 4 4L19 7"></path>`,
+  },
+  {
+    title: "Especialização em TOTVS e Sankhya",
+    text: "Atuação com TOTVS RM, TOTVS Protheus, TOTVS Fluig, Sankhya e integrações relacionadas.",
+    icon: `<rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect>`,
+  },
+  {
+    title: "Automação como estratégia",
+    text: "A consultoria conecta ERP, processos e automação para reduzir esforço manual e aumentar performance.",
+    icon: `<path d="M6 6h8a4 4 0 0 1 0 8H8"></path><path d="M8 10l-4 4 4 4"></path><circle cx="18" cy="6" r="2"></circle><circle cx="18" cy="14" r="2"></circle><circle cx="6" cy="18" r="2"></circle>`,
+  },
+];
+---
+
+<section class="relative overflow-hidden py-[clamp(4rem,6vw,6rem)]">
+  <div
+    class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(167,164,161,0.08),rgba(255,255,255,0.92))]"
+    aria-hidden="true"
+  ></div>
+
+  <div class="ateb-container relative">
+    <div class="grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+      
+      <div class="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#4d4837_0%,#1d120a_100%)] p-7 text-white shadow-[0_24px_60px_rgba(29,18,10,0.16)] lg:sticky lg:top-28 lg:p-8">
+        <div
+          class="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-ateb-lime/20 blur-3xl"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-white/10 blur-3xl"
+          aria-hidden="true"
+        ></div>
+
+        <div class="relative grid gap-5">
+          <span class="inline-flex w-fit rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.14em] text-white">
+            Diferenciais
+          </span>
+
+          <h2 class="font-sora text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.05] tracking-[-0.06em] text-white">
+            Por que escolher a ATEB Soluções
+          </h2>
+
+          <p class="text-[1rem] leading-7 text-white/74">
+            Porque a ATEB combina conhecimento técnico, visão de negócio e atuação consultiva para transformar ERP, processos e automação em resultado prático.
+          </p>
+
+          <div class="mt-3 grid grid-cols-2 gap-3">
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/10 p-4">
+              <p class="font-sora text-3xl font-extrabold tracking-[-0.06em] text-ateb-lime">
+                +20
+              </p>
+              <p class="mt-1 text-xs font-semibold leading-5 text-white/70">
+                anos de experiência
+              </p>
+            </div>
+
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/10 p-4">
+              <p class="font-sora text-3xl font-extrabold tracking-[-0.06em] text-ateb-lime">
+                ERP
+              </p>
+              <p class="mt-1 text-xs font-semibold leading-5 text-white/70">
+                automação e integração
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        {differentiators.map((item) => (
+          <article class="group relative overflow-hidden rounded-[1.5rem] border border-[rgba(77,72,55,0.12)] bg-white/90 p-6 shadow-[0_18px_45px_rgba(29,18,10,0.06)] backdrop-blur-xl transition duration-200 hover:-translate-y-1 hover:shadow-[0_26px_60px_rgba(29,18,10,0.10)]">
+            <div
+              class="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-ateb-lime/15 blur-2xl transition group-hover:bg-ateb-lime/25"
+              aria-hidden="true"
+            ></div>
+
+            <div class="relative grid gap-4">
+              <span class="inline-flex h-12 w-12 items-center justify-center rounded-[1rem] bg-[linear-gradient(180deg,rgba(179,209,51,0.24),rgba(167,164,161,0.18))] text-ateb-earth shadow-[0_14px_28px_rgba(29,18,10,0.08)]">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-6 w-6"
+                  set:html={item.icon}
+                />
+              </span>
+
+              <div class="grid gap-3">
+                <h3 class="font-sora text-[1.22rem] font-bold leading-[1.12] tracking-[-0.04em] text-ateb-dark">
+                  {item.title}
+                </h3>
+
+                <p class="text-[0.95rem] leading-7 text-[rgba(77,72,55,0.80)]">
+                  {item.text}
+                </p>
+              </div>
+            </div>
+
+            <span class="absolute inset-x-6 bottom-0 h-1 rounded-full bg-[linear-gradient(90deg,#b3d133,#4d4837)]"></span>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,127 @@
+---
+const audienceItems = [
+  "Já usam TOTVS RM, Protheus, Fluig ou Sankhya",
+  "Estão implantando ou revisando o uso do ERP",
+  "Têm processos manuais demais",
+  "Sofrem com retrabalho entre áreas",
+  "Precisam integrar sistemas",
+  "Querem melhorar indicadores e controle",
+  "Buscam consultoria ERP com visão de negócio",
+  "Precisam de apoio técnico e funcional para evoluir a operação",
+];
+
+const segmentItems = [
+  "Indústria",
+  "Construção civil",
+  "Educação",
+  "Empresas de médio e grande porte",
+  "Operações com processos complexos",
+  "Empresas que precisam de mais controle, automação e integração",
+];
+---
+
+<section class="relative overflow-hidden py-[clamp(4rem,6vw,6rem)]" id="para-quem">
+  <div
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(179,209,51,0.18),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.92),rgba(167,164,161,0.08))]"
+    aria-hidden="true"
+  ></div>
+
+  <div class="ateb-container relative grid gap-10">
+    <div class="mx-auto grid max-w-[860px] justify-items-center gap-4 text-center">
+      <span class="ateb-kicker bg-ateb-lime/15">
+        Para quem é a consultoria
+      </span>
+
+      <h2 class="font-sora text-[clamp(1.9rem,3.6vw,3.35rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
+        Essa consultoria faz sentido para empresas que querem evoluir a operação com ERP
+      </h2>
+
+      <p class="max-w-[720px] text-[1.05rem] leading-[1.75] text-[rgba(77,72,55,0.84)]">
+        A ATEB atende empresas que precisam de mais controle, automação,
+        integração e apoio consultivo para tornar o ERP mais aderente à
+        realidade do negócio.
+      </p>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+      <div class="grid gap-4 sm:grid-cols-2">
+        {audienceItems.map((item) => (
+          <div class="group relative overflow-hidden rounded-[1.35rem] border border-[rgba(77,72,55,0.1)] bg-white/92 p-5 shadow-[0_18px_45px_rgba(29,18,10,0.06)] backdrop-blur-xl transition duration-200 hover:-translate-y-1 hover:shadow-[0_26px_60px_rgba(29,18,10,0.10)]">
+            <div class="relative flex items-start gap-3">
+              <span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ateb-lime/20 text-ateb-earth">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-3.5 w-3.5"
+                >
+                  <path d="m5 13 4 4L19 7"></path>
+                </svg>
+              </span>
+
+              <p class="text-sm font-bold leading-6 text-ateb-earth">
+                {item}
+              </p>
+            </div>
+
+            <span class="absolute inset-x-5 bottom-0 h-1 rounded-full bg-[linear-gradient(90deg,#b3d133,#4d4837)] opacity-0 transition group-hover:opacity-100"></span>
+          </div>
+        ))}
+      </div>
+
+      <div class="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#4d4837_0%,#1d120a_100%)] p-7 text-white shadow-[0_24px_60px_rgba(29,18,10,0.16)] lg:p-8">
+        <div
+          class="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-ateb-lime/20 blur-3xl"
+          aria-hidden="true"
+        ></div>
+
+        <div class="relative grid gap-6">
+          <div class="grid gap-3">
+            <span class="inline-flex w-fit rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[0.14em] text-white">
+              Segmentos
+            </span>
+
+            <h3 class="font-sora text-[clamp(1.7rem,3vw,2.5rem)] font-extrabold leading-[1.08] tracking-[-0.05em] text-white">
+              Segmentos com maior aderência
+            </h3>
+
+            <p class="text-sm leading-7 text-white/72">
+              Empresas com operação complexa, áreas interligadas e necessidade de mais controle tendem a perceber mais valor na consultoria.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            {segmentItems.map((item) => (
+              <span class="inline-flex min-h-9 items-center rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-bold text-white/90">
+                {item}
+              </span>
+            ))}
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/10 p-4">
+              <p class="font-sora text-3xl font-extrabold tracking-[-0.06em] text-ateb-lime">
+                ERP
+              </p>
+              <p class="mt-1 text-xs font-semibold leading-5 text-white/70">
+                operação integrada
+              </p>
+            </div>
+
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/10 p-4">
+              <p class="font-sora text-3xl font-extrabold tracking-[-0.06em] text-ateb-lime">
+                B2B
+              </p>
+              <p class="mt-1 text-xs font-semibold leading-5 text-white/70">
+                médio e grande porte
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,93 @@
+---
+import { siteConfig } from "../../config/siteConfig.js";
+---
+
+<header class="sticky top-0 z-40 pt-4 max-[720px]:pt-2" data-header>
+  <div class="ateb-container">
+    <div class="relative mt-4 flex items-center justify-between gap-5 rounded-full border border-[rgba(77,72,55,0.14)] bg-white/85 px-5 py-3 shadow-[0_16px_40px_rgba(29,18,10,0.08)] backdrop-blur-xl max-[860px]:rounded-[1.5rem] max-[720px]:mt-2">
+      <a
+        href={siteConfig.primaryRoute}
+        aria-label={siteConfig.companyName}
+        class="inline-flex shrink-0 items-center leading-none"
+      >
+        <img
+          src="/Logo/logo.png"
+          alt={siteConfig.companyName}
+          width="500"
+          height="145"
+          decoding="async"
+          fetchpriority="high"
+          class="h-auto w-[clamp(100px,13vw,150px)] max-[720px]:w-[min(170px,50vw)]"
+        />
+      </a>
+
+      <button
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        data-menu-toggle
+        class="relative hidden h-12 w-12 rounded-full border border-[rgba(77,72,55,0.14)] bg-white/85 max-[860px]:inline-flex"
+      >
+        <span class="absolute left-[0.8rem] right-[0.8rem] top-[0.95rem] h-0.5 rounded-full bg-ateb-dark transition-all"></span>
+        <span class="absolute left-[0.8rem] right-[0.8rem] top-[1.45rem] h-0.5 rounded-full bg-ateb-dark transition-all"></span>
+        <span class="absolute left-[0.8rem] right-[0.8rem] top-[1.95rem] h-0.5 rounded-full bg-ateb-dark transition-all"></span>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+
+      <nav
+        id="site-nav"
+        data-site-nav
+        class="flex items-center gap-4 max-[860px]:absolute max-[860px]:left-0 max-[860px]:right-0 max-[860px]:top-[calc(100%+0.75rem)] max-[860px]:hidden max-[860px]:flex-col max-[860px]:items-stretch max-[860px]:rounded-[1.5rem] max-[860px]:border max-[860px]:border-[rgba(77,72,55,0.14)] max-[860px]:bg-white/95 max-[860px]:p-4 max-[860px]:shadow-[0_24px_60px_rgba(29,18,10,0.08)]"
+      >
+        <ul class="flex list-none items-center gap-1 max-[860px]:flex-col max-[860px]:items-stretch">
+          {siteConfig.navLinks.map((link, index) => (
+            <li>
+              <a
+                href={link.href}
+                class:list={[
+                  "inline-flex min-h-[2.6rem] items-center rounded-full px-4 font-bold text-[rgba(77,72,55,0.84)] hover:bg-ateb-lime/15 hover:text-ateb-dark max-[860px]:justify-center",
+                  index === 0 && "bg-ateb-lime/15 text-ateb-dark",
+                ]}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href={siteConfig.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ateb-button-primary"
+        >
+          Solicitar diagnostico
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector("[data-header]");
+  const toggle = document.querySelector("[data-menu-toggle]");
+  const nav = document.querySelector("[data-site-nav]");
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    nav?.classList.toggle("max-[860px]:hidden", isOpen);
+    nav?.classList.toggle("max-[860px]:flex", !isOpen);
+    header?.classList.toggle("menu-open", !isOpen);
+  });
+
+  nav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      toggle?.setAttribute("aria-expanded", "false");
+      nav.classList.add("max-[860px]:hidden");
+      nav.classList.remove("max-[860px]:flex");
+      header?.classList.remove("menu-open");
+    });
+  });
+</script>

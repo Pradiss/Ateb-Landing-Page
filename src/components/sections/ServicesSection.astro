@@ -1,0 +1,153 @@
+---
+const services = [
+  {
+    title: "Consultoria TOTVS RM",
+    description:
+      "A ATEB apoia empresas que utilizam o TOTVS RM e precisam melhorar a organizacao de rotinas, revisar processos, aumentar a confiabilidade das informacoes e tornar o sistema mais aderente ao dia a dia da operacao.",
+    items: [
+      "Compras",
+      "Faturamento",
+      "Estoque",
+      "Fiscal",
+      "Contabil",
+      "Financeiro",
+      "Folha e rotinas administrativas",
+      "Integracao com Fluig e outros sistemas",
+    ],
+    support:
+      "Se sua empresa ja usa o RM, mas sente que o sistema nao acompanha mais a complexidade da operacao, uma consultoria especializada pode ajudar a reorganizar processos, reduzir retrabalho e melhorar o controle.",
+  },
+  {
+    title: "Consultoria TOTVS Protheus",
+    description:
+      "A ATEB atua com consultoria TOTVS Protheus para empresas que precisam melhorar processos, revisar fluxos, apoiar integracoes e extrair mais valor do ERP.",
+    items: [
+      "Compras",
+      "Financeiro",
+      "Contabilidade",
+      "Fiscal",
+      "Estoque e custos",
+      "Faturamento",
+      "Integracoes com BI, e-commerce e outros sistemas",
+    ],
+    support:
+      "O trabalho pode envolver analise funcional, parametrizacao, customizacoes, sustentacao e integracao com outras ferramentas de gestao.",
+  },
+  {
+    title: "Consultoria TOTVS Fluig",
+    description:
+      "O TOTVS Fluig e uma frente estrategica para empresas que precisam automatizar fluxos, aprovacoes, solicitacoes e processos internos. A ATEB atua no mapeamento, desenho e desenvolvimento desses processos, conectando pessoas, areas e sistemas.",
+    items: [
+      "Fluxos de aprovacao",
+      "Solicitacoes internas",
+      "Processos de compras",
+      "Reembolsos e adiantamentos",
+      "Admissao, demissao e solicitacoes de RH",
+      "Comunicacao entre areas",
+      "Workflow integrado ao ERP",
+      "Reducao de tarefas manuais",
+    ],
+    support:
+      "O Fluig permite criar fluxos personalizados e integrados ao ERP, ajudando empresas a reduzir falhas operacionais, padronizar etapas e dar mais autonomia as areas.",
+  },
+  {
+    title: "Consultoria Sankhya",
+    description:
+      "Para empresas que utilizam Sankhya, a ATEB oferece apoio consultivo para otimizar processos, revisar parametrizacoes, melhorar usabilidade e integrar o ERP com outras plataformas.",
+    items: [
+      "Implantacao e ajustes de uso",
+      "Revisao de processos",
+      "Parametrizacao",
+      "Integracao com canais de venda",
+      "Melhoria de performance",
+      "Organizacao das rotinas da equipe",
+    ],
+  },
+  {
+    title: "Integracao entre sistemas",
+    description:
+      "Empresas que usam ERP, plataformas de venda, sistemas financeiros, ferramentas de atendimento, BI ou solucoes especificas muitas vezes sofrem com dados espalhados e retrabalho. A ATEB apoia a integracao entre sistemas para que as informacoes circulem melhor e a operacao ganhe consistencia.",
+    items: [
+      "ERP com e-commerce",
+      "ERP com marketplaces",
+      "ERP com Power BI",
+      "TOTVS RM integrado ao Fluig",
+      "Sistemas financeiros integrados ao WhatsApp",
+      "Processos automatizados entre areas",
+    ],
+  },
+  {
+    title: "Automacao de processos",
+    description:
+      "Automatizar processos e uma forma de reduzir esforco manual, evitar erros e liberar a equipe para atividades mais estrategicas. A ATEB identifica tarefas repetitivas, gargalos e fluxos pouco eficientes para propor automacoes aplicaveis a realidade da empresa.",
+    items: [
+      "Aprovacoes",
+      "Solicitacoes internas",
+      "Atendimento",
+      "Financeiro",
+      "Compras",
+      "Operacoes",
+      "Gestao documental",
+      "Comunicacao entre areas",
+    ],
+  },
+];
+---
+<section class="relative overflow-hidden py-[clamp(4rem,6vw,6rem)]" id="servicos">
+  <div
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(179,209,51,0.14),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.88),rgba(167,164,161,0.08))]"
+    aria-hidden="true"
+  ></div>
+
+  <div class="ateb-container relative grid gap-10">
+    <div class="mx-auto grid max-w-[860px] justify-items-center gap-4 text-center">
+      <span class="ateb-kicker bg-ateb-lime/15">
+        Serviços por solução
+      </span>
+
+      <h2 class="font-sora text-[clamp(1.9rem,3.6vw,3.35rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
+        Consultoria especializada em TOTVS, Protheus, RM, Fluig, Sankhya, integrações e automação
+      </h2>
+
+      <p class="max-w-[720px] text-[1.05rem] leading-[1.75] text-[rgba(77,72,55,0.84)]">
+        A ATEB Soluções apoia empresas que precisam revisar o uso do ERP,
+        melhorar processos, integrar sistemas e aumentar a performance da
+        operação.
+      </p>
+    </div>
+
+    <div class="grid gap-5 lg:grid-cols-2">
+      {services.map((service, index) => (
+        <article class="group relative overflow-hidden rounded-[1.75rem] border border-[rgba(77,72,55,0.12)] bg-white/95 p-6 shadow-[0_22px_55px_rgba(29,18,10,0.07)] backdrop-blur-xl transition duration-200 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(29,18,10,0.11)]">
+          <div
+            class="pointer-events-none absolute -right-14 -top-14 h-44 w-44 rounded-full bg-ateb-lime/15 blur-3xl transition group-hover:bg-ateb-lime/25"
+            aria-hidden="true"
+          ></div>
+
+          <div class="relative grid gap-5">
+            <div class="flex items-start gap-4">
+
+              <div class="grid gap-3">
+                <h3 class="font-sora text-[1.45rem] font-bold leading-[1.12] tracking-[-0.04em] text-ateb-dark">
+                  {service.title}
+                </h3>
+
+                <p class="text-[0.98rem] leading-7 text-[rgba(77,72,55,0.82)]">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2.5 pt-1">
+              {service.items.map((item) => (
+                <span class="inline-flex min-h-8 items-center rounded-full bg-ateb-lime/15 px-3 py-1.5 text-sm font-bold text-ateb-earth">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { siteConfig } from "../config/siteConfig.js";
+
+const pageTitle = `Termos de Uso | ${siteConfig.siteName}`;
+const pageDescription =
+  "Condicoes gerais de uso do site institucional da ATEB Solucoes.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <main class="ateb-section">
+    <section class="ateb-container">
+      <div class="ateb-card grid gap-8 p-6 md:p-10">
+        <div class="grid gap-4">
+          <span class="ateb-kicker">Legal</span>
+          <h1 class="ateb-section-title max-w-[10ch]">Termos de Uso</h1>
+          <p class="ateb-section-text max-w-[72ch]">
+            Estes termos apresentam as condicoes gerais para acesso e uso do site
+            institucional da {siteConfig.businessName}.
+          </p>
+        </div>
+
+        <div class="grid gap-6">
+          <section class="grid gap-3">
+            <h2 class="font-display text-2xl font-bold tracking-[-0.03em] text-ateb-dark">
+              1. Objetivo do site
+            </h2>
+            <p class="ateb-section-text">
+              Este site tem finalidade informativa e comercial, apresentando os
+              servicos, diferenciais e canais de atendimento da empresa.
+            </p>
+          </section>
+
+          <section class="grid gap-3">
+            <h2 class="font-display text-2xl font-bold tracking-[-0.03em] text-ateb-dark">
+              2. Uso adequado
+            </h2>
+            <p class="ateb-section-text">
+              O usuario se compromete a utilizar o site de forma licita, sem
+              praticar atividades que comprometam sua seguranca, funcionamento ou
+              integridade das informacoes publicadas.
+            </p>
+          </section>
+
+          <section class="grid gap-3">
+            <h2 class="font-display text-2xl font-bold tracking-[-0.03em] text-ateb-dark">
+              3. Conteudo e propriedade intelectual
+            </h2>
+            <p class="ateb-section-text">
+              Textos, marcas, imagens e demais elementos deste site pertencem a
+              {siteConfig.businessName} ou sao utilizados com autorizacao, nao
+              sendo permitida reproducao sem consentimento previo.
+            </p>
+          </section>
+
+          <section class="grid gap-3">
+            <h2 class="font-display text-2xl font-bold tracking-[-0.03em] text-ateb-dark">
+              4. Disponibilidade e responsabilidade
+            </h2>
+            <p class="ateb-section-text">
+              A empresa busca manter as informacoes atualizadas e o site
+              disponivel, mas pode realizar ajustes, atualizacoes ou interrupcoes
+              tecnicas sempre que necessario.
+            </p>
+          </section>
+
+          <section class="grid gap-3">
+            <h2 class="font-display text-2xl font-bold tracking-[-0.03em] text-ateb-dark">
+              5. Contato
+            </h2>
+            <p class="ateb-section-text">
+              Em caso de duvidas sobre estes termos, utilize os canais
+              disponibilizados no site ou envie uma mensagem para
+              {" "}{siteConfig.emails[0]}.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

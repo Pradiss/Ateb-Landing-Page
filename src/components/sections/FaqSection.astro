@@ -1,0 +1,100 @@
+---
+const faqItems = [
+  {
+    question: "A ATEB é uma consultoria TOTVS?",
+    answer:
+      "A ATEB Soluções atua com consultoria especializada em soluções do ecossistema TOTVS, como RM, Protheus e Fluig, além de Sankhya e integrações relacionadas.",
+  },
+  {
+    question: "Vocês atendem Protheus?",
+    answer:
+      "Sim. A ATEB oferece consultoria TOTVS Protheus para análise, melhoria, parametrização, integração e sustentação de processos.",
+  },
+  {
+    question: "Vocês atendem TOTVS RM?",
+    answer:
+      "Sim. A consultoria em TOTVS RM é uma das frentes estratégicas da ATEB, especialmente para empresas que precisam melhorar processos, revitalizar módulos ou integrar o RM com outras soluções.",
+  },
+  {
+    question: "Vocês trabalham com Fluig?",
+    answer:
+      "Sim. A ATEB atua com TOTVS Fluig para criação de fluxos personalizados, automação de processos, aprovações, solicitações internas e integração com ERP.",
+  },
+  {
+    question: "Vocês atendem Sankhya?",
+    answer:
+      "Sim. A ATEB também realiza consultoria Sankhya para implantação, otimização, parametrização e integração com outros sistemas.",
+  },
+  {
+    question: "O atendimento é presencial ou remoto?",
+    answer:
+      "A ATEB atende empresas em todo o Brasil, com suporte consultivo e atendimento remoto.",
+  },
+  {
+    question: "Minha empresa ainda usa muitos controles manuais. A consultoria pode ajudar?",
+    answer:
+      "Sim. Um dos principais focos da ATEB é transformar processos operacionais e manuais em rotinas mais automatizadas, organizadas e orientadas por dados.",
+  },
+];
+---
+
+<section
+  class="relative overflow-hidden py-[clamp(4rem,6vw,6rem)]"
+  id="faq"
+>
+  <div
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(179,209,51,0.14),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.95),rgba(167,164,161,0.08))]"
+    aria-hidden="true"
+  ></div>
+
+  <div class="ateb-container relative grid gap-10">
+    <div class="mx-auto grid max-w-[760px] justify-items-center gap-4 text-center">
+      <span class="ateb-kicker bg-ateb-lime/15">
+        FAQ
+      </span>
+
+      <h2 class="font-sora text-[clamp(1.9rem,3.6vw,3.35rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
+        Perguntas frequentes
+      </h2>
+
+      <p class="max-w-[620px] text-[1.05rem] leading-[1.75] text-[rgba(77,72,55,0.84)]">
+        Tire as principais dúvidas sobre a consultoria ERP da ATEB Soluções.
+      </p>
+    </div>
+
+    <div class="mx-auto grid w-full max-w-[920px] gap-4">
+      {faqItems.map((item) => (
+        <details class="group overflow-hidden rounded-[1.5rem] border border-[rgba(77,72,55,0.12)] bg-white/92 shadow-[0_18px_45px_rgba(29,18,10,0.06)] backdrop-blur-xl transition duration-200 open:shadow-[0_26px_60px_rgba(29,18,10,0.10)]">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-5 px-6 py-5">
+            <span class="font-sora text-[1.08rem] font-bold leading-[1.25] tracking-[-0.04em] text-ateb-dark">
+              {item.question}
+            </span>
+
+            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ateb-lime/15 text-ateb-earth transition group-open:rotate-45 group-open:bg-ateb-lime/25">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+              >
+                <path d="M12 5v14"></path>
+                <path d="M5 12h14"></path>
+              </svg>
+            </span>
+          </summary>
+
+          <div class="px-6 pb-6">
+            <div class="border-t border-[rgba(77,72,55,0.1)] pt-4">
+              <p class="max-w-[78ch] text-sm leading-7 text-[rgba(77,72,55,0.82)]">
+                {item.answer}
+              </p>
+            </div>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

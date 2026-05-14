@@ -1,0 +1,140 @@
+---
+import { buildWhatsAppUrl } from "../../config/siteConfig.js";
+
+const solutionCtaUrl = buildWhatsAppUrl(
+  "Ola, vim pela pagina de consultoria TOTVS, Protheus, RM, Fluig e Sankhya e quero avaliar minha operacao."
+);
+
+const evolutionItems = [
+  "Revisão e melhoria de processos no ERP",
+  "Implantação e revitalização de módulos",
+  "Parametrização conforme a realidade do negócio",
+  "Customização de rotinas e fluxos",
+  "Integração entre sistemas e áreas",
+  "Automação de tarefas repetitivas",
+  "Criação de workflows no Fluig",
+  "Apoio consultivo para tomada de decisão",
+  "Organização operacional e ganho de performance",
+];
+---
+
+<section class="relative overflow-hidden py-[clamp(4rem,6vw,6rem)]">
+  <div
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(179,209,51,0.16),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.95),rgba(167,164,161,0.08))]"
+    aria-hidden="true"
+  ></div>
+
+  <div class="ateb-container relative grid gap-10">
+    <div class="mx-auto grid max-w-[860px] justify-items-center gap-4 text-center">
+      <span class="ateb-kicker bg-ateb-lime/15">
+        Solução
+      </span>
+
+      <h2 class="font-sora text-[clamp(1.9rem,3.6vw,3.35rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
+        Consultoria ERP para organizar, automatizar e integrar sua operação
+      </h2>
+
+      <p class="max-w-[720px] text-[1.05rem] leading-[1.75] text-[rgba(77,72,55,0.84)]">
+        A consultoria da ATEB Soluções combina visão técnica, entendimento de processos e foco em performance empresarial.
+      </p>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+      <div class="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#4d4837_0%,#1d120a_100%)] p-7 text-white shadow-[0_24px_60px_rgba(29,18,10,0.16)] lg:p-8">
+        <div
+          class="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-ateb-lime/20 blur-3xl"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-white/10 blur-3xl"
+          aria-hidden="true"
+        ></div>
+
+        <div class="relative flex h-full flex-col justify-between gap-8">
+          <div class="grid gap-4">
+            <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-white/60">
+              Método consultivo
+            </p>
+
+            <h3 class="font-sora text-[clamp(1.75rem,3.2vw,2.8rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-white">
+              Não é apenas mexer no sistema. É melhorar a operação.
+            </h3>
+
+            <p class="text-[1rem] leading-7 text-white/76">
+              A proposta é entender como sua empresa trabalha, identificar o que precisa melhorar e aplicar soluções que tornem a rotina mais eficiente, segura e conectada.
+            </p>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/10 p-4">
+              <p class="font-sora text-3xl font-extrabold tracking-[-0.06em] text-ateb-lime">
+                ERP
+              </p>
+              <p class="mt-1 text-xs font-semibold leading-5 text-white/70">
+                processos mais aderentes ao negócio
+              </p>
+            </div>
+
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/10 p-4">
+              <p class="font-sora text-3xl font-extrabold tracking-[-0.06em] text-ateb-lime">
+                + performance
+              </p>
+              <p class="mt-1 text-xs font-semibold leading-5 text-white/70">
+                operação mais eficiente e conectada
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <a
+              href={solutionCtaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex min-h-[3.35rem] items-center justify-center rounded-full bg-ateb-lime px-7 py-3.5 text-sm font-extrabold text-ateb-dark shadow-[0_18px_35px_rgba(179,209,51,0.25)] transition hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(179,209,51,0.34)]"
+            >
+              Quero avaliar minha operação
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-[2rem] border border-[rgba(77,72,55,0.12)] bg-white/92 p-6 shadow-[0_24px_60px_rgba(29,18,10,0.08)] backdrop-blur-xl lg:p-7">
+        <div
+          class="pointer-events-none absolute -right-12 -top-12 h-44 w-44 rounded-full bg-ateb-lime/15 blur-3xl"
+          aria-hidden="true"
+        ></div>
+
+        <div class="relative grid gap-5">
+          <h3 class="font-sora text-[1.35rem] font-bold leading-tight tracking-[-0.04em] text-ateb-dark">
+            Com a ATEB, sua empresa pode evoluir em frentes como
+          </h3>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            {evolutionItems.map((item) => (
+              <div class="flex items-start gap-3 rounded-[1.15rem] border border-[rgba(77,72,55,0.08)] bg-[rgba(247,244,236,0.7)] px-4 py-4">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ateb-lime/20 text-ateb-earth">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-3.5 w-3.5"
+                  >
+                    <path d="m5 13 4 4L19 7"></path>
+                  </svg>
+                </span>
+
+                <p class="text-sm font-semibold leading-6 text-ateb-earth">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

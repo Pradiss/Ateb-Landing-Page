@@ -1,0 +1,77 @@
+---
+const cases = [
+  {
+    company: "Perlima Metais Perfurados",
+    title: "Fluig integrado ao TOTVS RM para automatizar processos internos",
+    description:
+      "A Perlima utilizou o Fluig integrado ao TOTVS RM para criar fluxos personalizados, reduzir tarefas manuais e dar mais autonomia as areas da empresa.",
+    result:
+      "Mais organizacao nos processos, menos dependencia de controles manuais e maior integracao entre operacao e sistema.",
+  },
+  {
+    company: "Jofege Pavimentacao e Construcao",
+    title: "Revitalizacao do TOTVS RM para mais controle operacional",
+    description:
+      "Com a revitalizacao do TOTVS RM, os modulos de compras, faturamento, estoque, fiscal e contabil ganharam mais organizacao e controle.",
+    result:
+      "Rotinas mais estruturadas, informacoes mais confiaveis e melhor aproveitamento do ERP.",
+  },
+  {
+    company: "Auto Pecas Motoristas",
+    title: "Implantacao Sankhya com integracao a vendas online",
+    description:
+      "Com a nova implantacao do Sankhya, a empresa melhorou desempenho e usabilidade, alem de integrar vendas online com Mercado Livre e Amazon.",
+    result:
+      "Operacao mais conectada, melhor experiencia de uso e integracao entre ERP e canais digitais.",
+  },
+  {
+    company: "Soleteto Empreendimentos",
+    title: "TOTVS RM integrado a IA via WhatsApp",
+    description:
+      "Com TOTVS RM integrado a IA via WhatsApp, a geracao de boletos financeiros ficou mais agil, automatizada e conectada a rotina do cliente.",
+    result:
+      "Mais velocidade no atendimento financeiro, automacao de solicitacoes e reducao de etapas manuais.",
+  },
+];
+---
+
+<section class="ateb-section" id="cases">
+  <div class="ateb-container grid gap-6">
+    <div class="grid max-w-[760px] gap-4">
+      <span class="ateb-kicker">Cases e relatos</span>
+
+      <h2 class="ateb-section-title">
+        Empresas que ja evoluiram processos com projetos conduzidos pela ATEB
+      </h2>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-2">
+      {cases.map((item) => (
+        <article class="ateb-card grid gap-4 p-6">
+          <div class="grid gap-2">
+            <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-ateb-earth/65">
+              {item.company}
+            </p>
+
+            <h3 class="font-sora text-[1.18rem] font-bold tracking-[-0.04em] text-ateb-dark">
+              {item.title}
+            </h3>
+          </div>
+
+          <p class="text-sm leading-7 text-[rgba(77,72,55,0.8)]">
+            {item.description}
+          </p>
+
+          <div class="rounded-[1.15rem] border border-[rgba(77,72,55,0.08)] bg-[rgba(247,244,236,0.7)] px-4 py-4">
+            <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-ateb-earth/70">
+              Resultado percebido
+            </p>
+            <p class="mt-2 text-sm leading-7 text-[rgba(77,72,55,0.82)]">
+              {item.result}
+            </p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

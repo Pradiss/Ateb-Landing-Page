@@ -1,0 +1,94 @@
+---
+const benefits = [
+  {
+    title: "Mais eficiência operacional",
+    text: "Processos mais claros, rotinas ajustadas e redução de retrabalho no dia a dia.",
+    icon: `<path d="m5 13 4 4L19 7"></path>`,
+  },
+  {
+    title: "Mais controle das informações",
+    text: "Dados mais organizados, integrados e confiáveis para apoiar decisões.",
+    icon: `<path d="M12 3 6 5.5v5.5c0 4.14 2.55 7.89 6 9 3.45-1.11 6-4.86 6-9V5.5L12 3Z"></path><path d="m9.5 12 1.7 1.7 3.8-3.8"></path>`,
+  },
+  {
+    title: "Mais produtividade da equipe",
+    text: "Menos tarefas repetitivas e mais tempo para atividades estratégicas.",
+    icon: `<path d="M5 16V9"></path><path d="M12 16V5"></path><path d="M19 16v-7"></path><path d="M3 20h18"></path>`,
+  },
+  {
+    title: "Mais aderência do ERP ao negócio",
+    text: "Parametrizações, fluxos e integrações alinhadas à realidade da empresa.",
+    icon: `<path d="M4 12c0-4.42 3.58-8 8-8"></path><path d="M20 12c0 4.42-3.58 8-8 8"></path><path d="M12 4v8l4 4"></path>`,
+  },
+  {
+    title: "Mais automação",
+    text: "Rotinas manuais transformadas em processos digitais, rastreáveis e escaláveis.",
+    icon: `<path d="M6 6h8a4 4 0 0 1 0 8H8"></path><path d="M8 10l-4 4 4 4"></path><circle cx="18" cy="6" r="2"></circle><circle cx="18" cy="14" r="2"></circle><circle cx="6" cy="18" r="2"></circle>`,
+  },
+  {
+    title: "Mais performance",
+    text: "Uso mais inteligente da tecnologia para melhorar resultados operacionais.",
+    icon: `<path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-4 3 3 5-7"></path>`,
+  },
+];
+---
+
+<section
+  class="relative overflow-hidden py-[clamp(4rem,6vw,6rem)]"
+  id="beneficios"
+>
+  <div
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(179,209,51,0.60),transparent_30%),linear-gradient(180deg,rgba(179,209,51,0.28),rgba(255,255,255,0.94))]"
+    aria-hidden="true"
+  ></div>
+
+  <div class="ateb-container relative grid gap-8">
+    <div class="mx-auto grid max-w-[760px] gap-4 text-center">
+      <span class="ateb-kicker mx-auto bg-white/70">
+        Benefícios
+      </span>
+
+      <h2 class="font-sora text-[clamp(1.9rem,3.6vw,3.35rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
+        O que sua empresa ganha com uma consultoria bem aplicada
+      </h2>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      {benefits.map((item) => (
+        <article class="group relative overflow-hidden rounded-[1.6rem] border border-[rgba(77,72,55,0.16)] bg-white/95 p-6 shadow-[0_24px_60px_rgba(29,18,10,0.08)] backdrop-blur-xl transition duration-200 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(29,18,10,0.12)]">
+          <div
+            class="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-ateb-lime/20 blur-2xl transition group-hover:bg-ateb-lime/30"
+            aria-hidden="true"
+          ></div>
+
+          <div class="relative grid gap-5">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-[1rem] bg-[linear-gradient(180deg,rgba(179,209,51,0.24),rgba(167,164,161,0.18))] text-ateb-earth shadow-[0_14px_28px_rgba(29,18,10,0.08)]">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-6 w-6"
+                set:html={item.icon}
+              />
+            </span>
+
+            <div class="grid gap-3">
+              <h3 class="font-sora text-[1.25rem] font-bold leading-[1.12] tracking-[-0.04em] text-ateb-dark">
+                {item.title}
+              </h3>
+
+              <p class="text-[0.98rem] leading-7 text-[rgba(77,72,55,0.82)]">
+                {item.text}
+              </p>
+            </div>
+          </div>
+
+          <span class="absolute inset-x-6 bottom-0 h-1 rounded-full bg-[linear-gradient(90deg,#b3d133,#4d4837)]"></span>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

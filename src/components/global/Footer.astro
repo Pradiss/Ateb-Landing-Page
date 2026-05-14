@@ -1,0 +1,140 @@
+---
+import {
+  buildMailHref,
+  buildPhoneHref,
+  siteConfig,
+} from "../../config/siteConfig.js";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-[rgba(77,72,55,0.08)] bg-[linear-gradient(180deg,rgba(167,164,161,0.08),rgba(179,209,51,0.08))]">
+  <div class="ateb-container py-[clamp(4rem,6vw,6rem)]">
+    <div class="grid gap-10 lg:grid-cols-[1.25fr_0.9fr_0.9fr_0.75fr]">
+      <div class="grid gap-5">
+        <a
+          href={siteConfig.primaryRoute}
+          aria-label={siteConfig.siteName}
+          class="inline-flex w-fit items-center"
+        >
+          <img
+            class="h-auto w-[min(240px,100%)]"
+            src="/Logo/logo.png"
+            alt={siteConfig.siteName}
+            width="500"
+            height="145"
+            decoding="async"
+            loading="lazy"
+          />
+        </a>
+
+        <p class="max-w-[54ch] text-sm leading-7 text-[rgba(77,72,55,0.84)]">
+          Consultoria especializada em ERP, automação e integração de sistemas
+          para empresas que precisam de mais eficiência, controle e resultado.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="inline-flex min-h-8 items-center rounded-full bg-ateb-lime/15 px-3 py-1.5 text-sm font-bold text-ateb-earth">
+            Atendimento em todo o Brasil
+          </span>
+          <span class="inline-flex min-h-8 items-center rounded-full bg-ateb-lime/15 px-3 py-1.5 text-sm font-bold text-ateb-earth">
+            Mais de 20 anos de experiência
+          </span>
+        </div>
+      </div>
+
+      <div class="grid content-start gap-4">
+        <h2 class="font-sora text-lg font-bold tracking-[-0.03em] text-ateb-dark">
+          Institucional
+        </h2>
+
+        <ul class="grid gap-3 text-sm text-[rgba(77,72,55,0.84)]">
+          {siteConfig.navigation.map((item) => (
+            <li>
+              <a class="transition hover:text-ateb-dark" href={item.href}>
+                {item.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a
+              href={siteConfig.addressHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition hover:text-ateb-dark"
+            >
+              {siteConfig.address}
+            </a>
+          </li>
+          <li>{siteConfig.businessHours}</li>
+        </ul>
+      </div>
+
+      <div class="grid content-start gap-4">
+        <h2 class="font-sora text-lg font-bold tracking-[-0.03em] text-ateb-dark">
+          Contato
+        </h2>
+
+        <ul class="grid gap-3 text-sm text-[rgba(77,72,55,0.84)]">
+          {siteConfig.phones.map((phone) => (
+            <li>
+              <a href={buildPhoneHref(phone)} class="transition hover:text-ateb-dark">
+                {phone}
+              </a>
+            </li>
+          ))}
+          {siteConfig.emails.map((email) => (
+            <li>
+              <a
+                href={buildMailHref(email)}
+                class="break-words transition hover:text-ateb-dark"
+              >
+                {email}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="grid content-start gap-4">
+        <h2 class="font-sora text-lg font-bold tracking-[-0.03em] text-ateb-dark">
+          Legal
+        </h2>
+
+        <ul class="grid gap-3 text-sm text-[rgba(77,72,55,0.84)]">
+          {siteConfig.legalNavigation.map((item) => (
+            <li>
+              <a class="transition hover:text-ateb-dark" href={item.href}>
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-[rgba(77,72,55,0.1)]">
+    <div class="ateb-container flex flex-col gap-3 py-5 text-sm text-[rgba(77,72,55,0.72)] md:flex-row md:items-center md:justify-between">
+      <p>
+        {siteConfig.businessName}
+        {" "}
+        <span aria-hidden="true">&middot;</span>
+        {" "}
+        {siteConfig.cnpj ? `CNPJ ${siteConfig.cnpj}` : currentYear}
+      </p>
+
+      <p>
+        Desenvolvido por{" "}
+        <a
+          href="https://evoofy.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-bold text-ateb-dark transition hover:text-ateb-earth"
+        >
+          Evoofy
+        </a>.
+      </p>
+    </div>
+  </div>
+</footer>
