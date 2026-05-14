@@ -1,28 +1,30 @@
 ---
+const contactSectionUrl = "#contato";
+
 const benefits = [
   {
-    title: "Mais eficiência operacional",
-    text: "Processos mais claros, rotinas ajustadas e redução de retrabalho no dia a dia.",
+    title: "Mais eficiencia operacional",
+    text: "Processos mais claros, rotinas ajustadas e reducao de retrabalho no dia a dia.",
     icon: `<path d="m5 13 4 4L19 7"></path>`,
   },
   {
-    title: "Mais controle das informações",
-    text: "Dados mais organizados, integrados e confiáveis para apoiar decisões.",
+    title: "Mais controle das informacoes",
+    text: "Dados mais organizados, integrados e confiaveis para apoiar decisoes.",
     icon: `<path d="M12 3 6 5.5v5.5c0 4.14 2.55 7.89 6 9 3.45-1.11 6-4.86 6-9V5.5L12 3Z"></path><path d="m9.5 12 1.7 1.7 3.8-3.8"></path>`,
   },
   {
     title: "Mais produtividade da equipe",
-    text: "Menos tarefas repetitivas e mais tempo para atividades estratégicas.",
+    text: "Menos tarefas repetitivas e mais tempo para atividades estrategicas.",
     icon: `<path d="M5 16V9"></path><path d="M12 16V5"></path><path d="M19 16v-7"></path><path d="M3 20h18"></path>`,
   },
   {
-    title: "Mais aderência do ERP ao negócio",
-    text: "Parametrizações, fluxos e integrações alinhadas à realidade da empresa.",
+    title: "Mais aderencia do ERP ao negocio",
+    text: "Parametrizacoes, fluxos e integracoes alinhadas a realidade da empresa.",
     icon: `<path d="M4 12c0-4.42 3.58-8 8-8"></path><path d="M20 12c0 4.42-3.58 8-8 8"></path><path d="M12 4v8l4 4"></path>`,
   },
   {
-    title: "Mais automação",
-    text: "Rotinas manuais transformadas em processos digitais, rastreáveis e escaláveis.",
+    title: "Mais automacao",
+    text: "Rotinas manuais transformadas em processos digitais, rastreaveis e escalaveis.",
     icon: `<path d="M6 6h8a4 4 0 0 1 0 8H8"></path><path d="M8 10l-4 4 4 4"></path><circle cx="18" cy="6" r="2"></circle><circle cx="18" cy="14" r="2"></circle><circle cx="6" cy="18" r="2"></circle>`,
   },
   {
@@ -44,10 +46,6 @@ const benefits = [
 
   <div class="ateb-container relative grid gap-8">
     <div class="mx-auto grid max-w-[760px] gap-4 text-center">
-      <span class="ateb-kicker mx-auto bg-white/70">
-        Benefícios
-      </span>
-
       <h2 class="font-sora text-[clamp(1.9rem,3.6vw,3.35rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
         O que sua empresa ganha com uma consultoria bem aplicada
       </h2>
@@ -89,6 +87,15 @@ const benefits = [
           <span class="absolute inset-x-6 bottom-0 h-1 rounded-full bg-[linear-gradient(90deg,#b3d133,#4d4837)]"></span>
         </article>
       ))}
+    </div>
+
+    <div class="flex justify-center pt-2">
+      <a
+        href={contactSectionUrl}
+        class="inline-flex min-h-[3.35rem] w-full items-center justify-center rounded-full bg-ateb-lime px-7 py-3.5 text-center text-sm font-extrabold text-ateb-dark shadow-[0_18px_35px_rgba(179,209,51,0.25)] transition hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(179,209,51,0.34)] sm:w-auto"
+      >
+        Solicitar diagnostico estrategico
+      </a>
     </div>
   </div>
 </section>

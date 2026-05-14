@@ -1,20 +1,16 @@
 ---
-import { buildWhatsAppUrl } from "../../config/siteConfig.js";
-
-const solutionCtaUrl = buildWhatsAppUrl(
-  "Ola, vim pela pagina de consultoria TOTVS, Protheus, RM, Fluig e Sankhya e quero avaliar minha operacao."
-);
+const contactSectionUrl = "#contato";
 
 const evolutionItems = [
-  "Revisão e melhoria de processos no ERP",
-  "Implantação e revitalização de módulos",
-  "Parametrização conforme a realidade do negócio",
-  "Customização de rotinas e fluxos",
-  "Integração entre sistemas e áreas",
-  "Automação de tarefas repetitivas",
-  "Criação de workflows no Fluig",
-  "Apoio consultivo para tomada de decisão",
-  "Organização operacional e ganho de performance",
+  "Revisao e melhoria de processos no ERP",
+  "Implantacao e revitalizacao de modulos",
+  "Parametrizacao conforme a realidade do negocio",
+  "Customizacao de rotinas e fluxos",
+  "Integracao entre sistemas e areas",
+  "Automacao de tarefas repetitivas",
+  "Criacao de workflows no Fluig",
+  "Apoio consultivo para tomada de decisao",
+  "Organizacao operacional e ganho de performance",
 ];
 ---
 
@@ -26,16 +22,13 @@ const evolutionItems = [
 
   <div class="ateb-container relative grid gap-10">
     <div class="mx-auto grid max-w-[860px] justify-items-center gap-4 text-center">
-      <span class="ateb-kicker bg-ateb-lime/15">
-        Solução
-      </span>
-
       <h2 class="font-sora text-[clamp(1.9rem,3.6vw,3.35rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
-        Consultoria ERP para organizar, automatizar e integrar sua operação
+        Consultoria ERP para organizar, automatizar e integrar sua operacao
       </h2>
 
       <p class="max-w-[720px] text-[1.05rem] leading-[1.75] text-[rgba(77,72,55,0.84)]">
-        A consultoria da ATEB Soluções combina visão técnica, entendimento de processos e foco em performance empresarial.
+        A consultoria da ATEB Solucoes combina visao tecnica, entendimento de
+        processos e foco em performance empresarial.
       </p>
     </div>
 
@@ -54,15 +47,17 @@ const evolutionItems = [
         <div class="relative flex h-full flex-col justify-between gap-8">
           <div class="grid gap-4">
             <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-white/60">
-              Método consultivo
+              Metodo consultivo
             </p>
 
             <h3 class="font-sora text-[clamp(1.75rem,3.2vw,2.8rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-white">
-              Não é apenas mexer no sistema. É melhorar a operação.
+              Nao e apenas mexer no sistema. E melhorar a operacao.
             </h3>
 
             <p class="text-[1rem] leading-7 text-white/76">
-              A proposta é entender como sua empresa trabalha, identificar o que precisa melhorar e aplicar soluções que tornem a rotina mais eficiente, segura e conectada.
+              A proposta e entender como sua empresa trabalha, identificar o que
+              precisa melhorar e aplicar solucoes que tornem a rotina mais
+              eficiente, segura e conectada.
             </p>
           </div>
 
@@ -72,7 +67,7 @@ const evolutionItems = [
                 ERP
               </p>
               <p class="mt-1 text-xs font-semibold leading-5 text-white/70">
-                processos mais aderentes ao negócio
+                processos mais aderentes ao negocio
               </p>
             </div>
 
@@ -81,19 +76,17 @@ const evolutionItems = [
                 + performance
               </p>
               <p class="mt-1 text-xs font-semibold leading-5 text-white/70">
-                operação mais eficiente e conectada
+                operacao mais eficiente e conectada
               </p>
             </div>
           </div>
 
           <div>
             <a
-              href={solutionCtaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex min-h-[3.35rem] items-center justify-center rounded-full bg-ateb-lime px-7 py-3.5 text-sm font-extrabold text-ateb-dark shadow-[0_18px_35px_rgba(179,209,51,0.25)] transition hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(179,209,51,0.34)]"
+              href={contactSectionUrl}
+              class="inline-flex min-h-[3.35rem] w-full items-center justify-center rounded-full bg-ateb-lime px-7 py-3.5 text-center text-sm font-extrabold text-ateb-dark shadow-[0_18px_35px_rgba(179,209,51,0.25)] transition hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(179,209,51,0.34)] sm:w-auto"
             >
-              Quero avaliar minha operação
+              Solicitar diagnostico estrategico
             </a>
           </div>
         </div>

@@ -1,0 +1,70 @@
+---
+import { siteConfig } from "../../config/siteConfig.js";
+---
+
+<div
+  class="fixed inset-x-0 bottom-4 z-[60] hidden px-4"
+  data-cookie-banner
+>
+  <div class="mx-auto flex w-full max-w-[980px] flex-col gap-4 rounded-[1.5rem] border border-[rgba(77,72,55,0.12)] bg-white/95 p-5 text-ateb-dark shadow-[0_24px_60px_rgba(29,18,10,0.12)] backdrop-blur-xl md:flex-row md:items-end md:justify-between">
+    <div class="grid gap-2">
+      <p class="text-sm font-bold uppercase tracking-[0.16em] text-ateb-earth/80">
+        Cookies
+      </p>
+      <p class="max-w-[68ch] text-sm leading-7 text-[rgba(77,72,55,0.84)]">
+        Utilizamos cookies para melhorar sua experiencia no site, entender o uso
+        das paginas e apoiar o atendimento inicial. Ao continuar, voce concorda
+        com esse uso.
+      </p>
+      <a
+        href={siteConfig.legalNavigation[0]?.href ?? "/politica-de-privacidade"}
+        class="text-sm font-semibold text-ateb-earth underline-offset-4 transition hover:text-ateb-dark hover:underline"
+      >
+        Ler politica de privacidade
+      </a>
+    </div>
+
+    <div class="flex shrink-0 flex-wrap gap-3">
+      <button
+        type="button"
+        class="ateb-button-secondary"
+        data-cookie-dismiss
+      >
+        Fechar
+      </button>
+      <button
+        type="button"
+        class="ateb-button-primary"
+        data-cookie-accept
+      >
+        Aceitar cookies
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const storageKey = "ateb-cookie-consent";
+  const banner = document.querySelector("[data-cookie-banner]");
+  const acceptButton = document.querySelector("[data-cookie-accept]");
+  const dismissButton = document.querySelector("[data-cookie-dismiss]");
+
+  const hideBanner = () => {
+    banner?.classList.add("hidden");
+  };
+
+  const showBanner = () => {
+    banner?.classList.remove("hidden");
+  };
+
+  if (!window.localStorage.getItem(storageKey)) {
+    showBanner();
+  }
+
+  acceptButton?.addEventListener("click", () => {
+    window.localStorage.setItem(storageKey, "accepted");
+    hideBanner();
+  });
+
+  dismissButton?.addEventListener("click", hideBanner);
+</script>

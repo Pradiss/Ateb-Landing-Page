@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { siteConfig } from "../config/siteConfig.js";
+
+const pageTitle = `Pagina nao encontrada | ${siteConfig.siteName}`;
+const pageDescription =
+  "A pagina que voce tentou acessar nao foi encontrada.";
+---
+
+<Layout title={pageTitle} description={pageDescription} robots="noindex, follow">
+  <main class="ateb-section">
+    <section class="ateb-container">
+      <div class="ateb-card grid gap-8 overflow-hidden p-6 md:p-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+        <div class="grid gap-5">
+          <span class="ateb-kicker">Erro 404</span>
+
+          <h1 class="ateb-section-title max-w-[10ch]">
+            Pagina nao encontrada
+          </h1>
+
+          <p class="ateb-section-text max-w-[58ch]">
+            O link acessado pode estar incorreto, desatualizado ou a pagina pode
+            ter sido movida. Voce pode voltar para a landing principal e seguir
+            a navegacao normalmente.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a href={siteConfig.primaryRoute} class="ateb-button-primary">
+              Ir para a pagina principal
+            </a>
+            <a
+              href={siteConfig.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ateb-button-secondary"
+            >
+              Falar pelo WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="grid gap-4">
+          <div class="rounded-[1.5rem] border border-[rgba(77,72,55,0.08)] bg-[linear-gradient(135deg,rgba(179,209,51,0.16),rgba(255,255,255,0.72))] p-6 md:p-8">
+            <p class="font-display text-[clamp(4rem,10vw,7rem)] font-bold leading-none tracking-[-0.08em] text-ateb-dark">
+              404
+            </p>
+            <p class="mt-4 text-sm leading-7 text-[rgba(77,72,55,0.84)]">
+              Se quiser, voce tambem pode usar o menu principal ou acessar uma
+              das paginas legais no rodape.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

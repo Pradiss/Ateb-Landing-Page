@@ -1,4 +1,6 @@
 ---
+const contactSectionUrl = "#contato";
+
 const services = [
   {
     title: "Consultoria TOTVS RM",
@@ -93,6 +95,7 @@ const services = [
   },
 ];
 ---
+
 <section class="relative overflow-hidden py-[clamp(4rem,6vw,6rem)]" id="servicos">
   <div
     class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(179,209,51,0.14),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.88),rgba(167,164,161,0.08))]"
@@ -101,23 +104,20 @@ const services = [
 
   <div class="ateb-container relative grid gap-10">
     <div class="mx-auto grid max-w-[860px] justify-items-center gap-4 text-center">
-      <span class="ateb-kicker bg-ateb-lime/15">
-        Serviços por solução
-      </span>
-
       <h2 class="font-sora text-[clamp(1.9rem,3.6vw,3.35rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
-        Consultoria especializada em TOTVS, Protheus, RM, Fluig, Sankhya, integrações e automação
+        Consultoria especializada em TOTVS, Protheus, RM, Fluig, Sankhya, integracoes e automacao
       </h2>
 
       <p class="max-w-[720px] text-[1.05rem] leading-[1.75] text-[rgba(77,72,55,0.84)]">
-        A ATEB Soluções apoia empresas que precisam revisar o uso do ERP,
+        A ATEB Solucoes apoia empresas que precisam revisar o uso do ERP,
         melhorar processos, integrar sistemas e aumentar a performance da
-        operação.
+        operacao.
       </p>
+
     </div>
 
     <div class="grid gap-5 lg:grid-cols-2">
-      {services.map((service, index) => (
+      {services.map((service) => (
         <article class="group relative overflow-hidden rounded-[1.75rem] border border-[rgba(77,72,55,0.12)] bg-white/95 p-6 shadow-[0_22px_55px_rgba(29,18,10,0.07)] backdrop-blur-xl transition duration-200 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(29,18,10,0.11)]">
           <div
             class="pointer-events-none absolute -right-14 -top-14 h-44 w-44 rounded-full bg-ateb-lime/15 blur-3xl transition group-hover:bg-ateb-lime/25"
@@ -126,7 +126,6 @@ const services = [
 
           <div class="relative grid gap-5">
             <div class="flex items-start gap-4">
-
               <div class="grid gap-3">
                 <h3 class="font-sora text-[1.45rem] font-bold leading-[1.12] tracking-[-0.04em] text-ateb-dark">
                   {service.title}
@@ -148,6 +147,15 @@ const services = [
           </div>
         </article>
       ))}
+    </div>
+
+    <div class="flex justify-center pt-2">
+      <a
+        href={contactSectionUrl}
+        class="inline-flex min-h-[3.35rem] w-full items-center justify-center rounded-full bg-ateb-lime px-7 py-3.5 text-center text-sm font-extrabold text-ateb-dark shadow-[0_18px_35px_rgba(179,209,51,0.25)] transition hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(179,209,51,0.34)] sm:w-auto"
+      >
+        Solicitar diagnostico estrategico
+      </a>
     </div>
   </div>
 </section>

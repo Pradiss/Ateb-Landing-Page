@@ -14,7 +14,7 @@ const navigation = [
     href: primaryRoute,
   },
   {
-    label: "Servicos",
+    label: "Serviços",
     href: `${primaryRoute}#servicos`,
   },
   {

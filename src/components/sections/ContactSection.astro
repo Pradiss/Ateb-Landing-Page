@@ -1,183 +1,28 @@
 ---
-import { siteConfig } from "../../config/siteConfig.js";
+const contactEmail = "laise.longatto@atebsolucoes.com.br";
 ---
 
 <section class="ateb-section pb-20" id="contato">
-  <div class="ateb-container grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
-    <div class="grid gap-6">
-      <div class="grid gap-4">
-        <span class="ateb-kicker">Formulario e conversao final</span>
-
-        <h2 class="ateb-section-title max-w-[15ch]">
-          Vamos avaliar o cenario da sua empresa?
-        </h2>
-
-        <p class="ateb-section-text">
-          Preencha o formulario ou fale diretamente pelo WhatsApp para entender
-          como a ATEB pode ajudar sua operacao a ganhar mais eficiencia,
-          controle e performance.
-        </p>
+  <div
+    class="ateb-container grid items-stretch gap-6 lg:grid-cols-[0.9fr_1.1fr]"
+  >
+    <div class="relative overflow-hidden rounded-[2rem] p-7 lg:p-8">
+      <div
+        class="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full"
+        aria-hidden="true"
+      >
       </div>
-      <div class="ateb-card grid gap-5 p-6">
-        <div class="flex items-center gap-3">
-          <span
-            class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] bg-[linear-gradient(180deg,rgba(179,209,51,0.24),rgba(167,164,161,0.18))] text-ateb-earth shadow-[0_14px_28px_rgba(29,18,10,0.08)]"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="h-6 w-6"
-            >
-              <path
-                d="M6.5 4h3l1.5 4-2 1.5a15 15 0 0 0 5.5 5.5L16 13l4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4Z"
-              ></path>
-            </svg>
-          </span>
 
-          <h3
-            class="font-sora text-[1.25rem] font-bold tracking-[-0.04em] text-ateb-dark"
-          >
-            Atendimento consultivo
-          </h3>
-        </div>
+      <div class="relative flex min-h-full items-center justify-center overflow-hidden rounded-[2rem] p-7 text-center lg:p-8 lg:text-left">
+        <div class="relative grid max-w-[520px] gap-4 lg:mx-0">
+          <h2 class="font-sora text-[clamp(2rem,4vw,3.15rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
+            Vamos avaliar o cenario da sua empresa?
+          </h2>
 
-        <div class="grid gap-3 text-sm text-[rgba(77,72,55,0.84)]">
-          <a
-            href={`https://wa.me/${siteConfig.whatsappNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-start gap-3 transition hover:text-ateb-dark"
-          >
-            <span
-              class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ateb-lime/15 text-ateb-earth"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-3.5 w-3.5"
-              >
-                <path
-                  d="M6.5 4h3l1.5 4-2 1.5a15 15 0 0 0 5.5 5.5L16 13l4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4Z"
-                ></path>
-              </svg>
-            </span>
-            <span>WhatsApp: {siteConfig.whatsappDisplay}</span>
-          </a>
-
-          <p class="flex items-start gap-3">
-            <span
-              class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ateb-lime/15 text-ateb-earth"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-3.5 w-3.5"
-              >
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19 19.5 19.5 0 0 1 5 12.81 19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.59 2.61a2 2 0 0 1-.45 2.11L8.09 9.55a16 16 0 0 0 6.36 6.36l1.11-1.11a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.61.59A2 2 0 0 1 22 16.92Z"
-                ></path>
-              </svg>
-            </span>
-            <span>Telefone: {siteConfig.secondaryPhoneDisplay}</span>
+          <p class="text-[1rem] leading-7 text-[rgba(77,72,55,0.84)]">
+            Preencha o formulario para entender como a ATEB pode ajudar sua
+            operacao a ganhar mais eficiencia, controle e performance.
           </p>
-
-          <p class="flex items-start gap-3">
-            <span
-              class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ateb-lime/15 text-ateb-earth"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-3.5 w-3.5"
-              >
-                <circle cx="12" cy="12" r="8"></circle>
-                <path d="M12 8v4l3 2"></path>
-              </svg>
-            </span>
-            <span>Atendimento em todo o Brasil</span>
-          </p>
-
-          <p class="flex items-start gap-3">
-            <span
-              class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ateb-lime/15 text-ateb-earth"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-3.5 w-3.5"
-              >
-                <path d="M12 21s6-5.33 6-11a6 6 0 1 0-12 0c0 5.67 6 11 6 11Z"
-                ></path>
-                <circle cx="12" cy="10" r="2.5"></circle>
-              </svg>
-            </span>
-            <span>{siteConfig.address}</span>
-          </p>
-
-          <p class="flex items-start gap-3">
-            <span
-              class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ateb-lime/15 text-ateb-earth"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-3.5 w-3.5"
-              >
-                <circle cx="12" cy="12" r="8"></circle>
-                <path d="M12 7v5l3 2"></path>
-              </svg>
-            </span>
-            <span>{siteConfig.hours}</span>
-          </p>
-        </div>
-
-        <div class="flex flex-wrap gap-3">
-          {
-            siteConfig.emails.map((email) => (
-              <a
-                href={`mailto:${email}`}
-                class="inline-flex items-center gap-2 rounded-full bg-ateb-lime/15 px-3 py-1.5 text-sm font-bold text-ateb-earth transition hover:bg-ateb-lime/25"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="h-4 w-4"
-                >
-                  <rect x="3" y="5" width="18" height="14" rx="2" />
-                  <path d="m4 7 8 6 8-6" />
-                </svg>
-                {email}
-              </a>
-            ))
-          }
         </div>
       </div>
     </div>
@@ -192,23 +37,19 @@ import { siteConfig } from "../../config/siteConfig.js";
       </div>
 
       <div class="relative mb-6 grid gap-2">
-        <span class="ateb-kicker w-fit bg-ateb-lime/15">
-          Diagnóstico inicial
-        </span>
-
         <h3
           class="font-sora text-[1.55rem] font-extrabold tracking-[-0.05em] text-ateb-dark"
         >
-          Conte sobre sua operação
+          Conte sobre sua operacao
         </h3>
 
         <p class="text-sm leading-6 text-[rgba(77,72,55,0.72)]">
-          Envie seus dados e a mensagem será organizada automaticamente para o
-          WhatsApp da ATEB.
+          Envie seus dados e a mensagem sera organizada automaticamente para o
+          e-mail da ATEB: {contactEmail}.
         </p>
       </div>
 
-      <form class="relative grid gap-4" data-whatsapp-form>
+      <form class="relative grid gap-4" data-email-form>
         <div class="grid gap-4 md:grid-cols-2">
           <label class="grid gap-2">
             <span class="text-sm font-bold text-ateb-earth">Nome</span>
@@ -259,78 +100,43 @@ import { siteConfig } from "../../config/siteConfig.js";
           </label>
         </div>
 
-        <div class="grid gap-4 md:grid-cols-2">
-          <label class="grid gap-2">
-            <span class="text-sm font-bold text-ateb-earth">
-              Sistema utilizado atualmente
-            </span>
-            <select class="ateb-input" name="sistema" required>
-              <option value="">Selecione</option>
-              <option>TOTVS RM</option>
-              <option>TOTVS Protheus</option>
-              <option>TOTVS Fluig</option>
-              <option>Sankhya</option>
-              <option>Outro ERP</option>
-              <option>Ainda em implantação</option>
-            </select>
-          </label>
-
-          <label class="grid gap-2">
-            <span class="text-sm font-bold text-ateb-earth">
-              Principal necessidade
-            </span>
-            <select class="ateb-input" name="necessidade" required>
-              <option value="">Selecione</option>
-              <option>TOTVS RM</option>
-              <option>TOTVS Protheus</option>
-              <option>TOTVS Fluig</option>
-              <option>Sankhya</option>
-              <option>Integração entre sistemas</option>
-              <option>Automação de processos</option>
-              <option>Outro</option>
-            </select>
-          </label>
-        </div>
+        <label class="grid gap-2">
+          <span class="text-sm font-bold text-ateb-earth">
+            Principal necessidade
+          </span>
+          <select class="ateb-input" name="necessidade" required>
+            <option value="">Selecione</option>
+            <option>TOTVS RM</option>
+            <option>TOTVS Protheus</option>
+            <option>TOTVS Fluig</option>
+            <option>Sankhya</option>
+            <option>Integracao entre sistemas</option>
+            <option>Automacao de processos</option>
+            <option>Outro</option>
+          </select>
+        </label>
 
         <label class="grid gap-2">
           <span class="text-sm font-bold text-ateb-earth">Mensagem</span>
           <textarea
             class="ateb-textarea min-h-[140px]"
             name="mensagem"
-            placeholder="Conte um pouco sobre o cenário atual, dores ou objetivos da sua operação."
+            placeholder="Conte um pouco sobre o cenario atual, dores ou objetivos da sua operacao."
           ></textarea>
         </label>
 
         <div class="flex flex-wrap gap-4 pt-2">
           <button type="submit" class="ateb-button-primary">
-            Solicitar diagnóstico
+            Solicitar diagnostico
           </button>
-
-          <a
-            href={siteConfig.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="ateb-button-secondary"
-          >
-            Falar agora pelo WhatsApp
-          </a>
-        </div>
-
-        <div
-          class="rounded-[1.15rem] border border-[rgba(77,72,55,0.08)] bg-[rgba(247,244,236,0.7)] px-4 py-4"
-        >
-          <p class="text-sm leading-6 text-[rgba(77,72,55,0.74)]">
-            Ao enviar, abrimos o WhatsApp com sua mensagem estruturada para
-            agilizar o atendimento inicial.
-          </p>
         </div>
       </form>
     </div>
   </div>
 </section>
 
-<script define:vars={{ whatsappNumber: siteConfig.whatsappNumber }}>
-  const form = document.querySelector("[data-whatsapp-form]");
+<script define:vars={{ contactEmail }}>
+  const form = document.querySelector("[data-email-form]");
 
   form?.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -341,7 +147,6 @@ import { siteConfig } from "../../config/siteConfig.js";
       ["Empresa", formData.get("empresa")],
       ["Telefone / WhatsApp", formData.get("telefone")],
       ["E-mail", formData.get("email")],
-      ["Sistema utilizado atualmente", formData.get("sistema")],
       ["Principal necessidade", formData.get("necessidade")],
       ["Mensagem", formData.get("mensagem")],
     ];
@@ -354,10 +159,11 @@ import { siteConfig } from "../../config/siteConfig.js";
         .map(([label, value]) => `${label}: ${String(value).trim()}`),
     ].join("\n");
 
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
-      "_blank",
-      "noopener,noreferrer"
-    );
+    const company = String(formData.get("empresa") ?? "").trim();
+    const subject = company
+      ? `Solicitacao de diagnostico - ${company}`
+      : "Solicitacao de diagnostico - Landing page ATEB";
+
+    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
   });
 </script>
