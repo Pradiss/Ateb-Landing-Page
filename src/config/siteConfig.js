@@ -1,16 +1,17 @@
 const whatsappNumber = "5519981112786";
-const businessName = "ATEB Solucoes";
+const businessName = "ATEB Soluções";
 const primaryRoute = "/consultoria-totvs-protheus-rm-fluig-sankhya";
+const thankYouRoute = "/obrigado";
 const phones = ["(19) 98111-2786", "(19) 99922-1978"];
 const emails = [
   "laise.longatto@atebsolucoes.com.br",
   "leide.longatto@atebsolucoes.com.br",
 ];
-const address = "Rua da Boa Morte, 194, Sala 112, Centro - Limeira - Sao Paulo";
-const businessHours = "Segunda a Sexta, das 08h as 18h";
+const address = "Rua da Boa Morte, 194, Sala 112, Centro - Limeira - São Paulo";
+const businessHours = "Segunda a Sexta, das 08h às 18h";
 const navigation = [
   {
-    label: "Inicio",
+    label: "Início",
     href: primaryRoute,
   },
   {
@@ -32,7 +33,7 @@ const navigation = [
 ];
 const legalNavigation = [
   {
-    label: "Politica de Privacidade",
+    label: "Política de Privacidade",
     href: "/politica-de-privacidade",
   },
   {
@@ -43,7 +44,7 @@ const legalNavigation = [
 
 export const buildWhatsAppUrl = (
   message =
-    "Ola, vim pela landing page da ATEB Solucoes e gostaria de solicitar um diagnostico estrategico."
+    "Olá, vim pela landing page da ATEB Soluções e gostaria de solicitar um diagnóstico estratégico."
 ) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 export const buildPhoneHref = (phone) => {
@@ -60,13 +61,17 @@ export const siteConfig = {
   businessName,
   siteName: businessName,
   primaryRoute,
+  thankYouRoute,
   whatsappNumber,
   whatsappDisplay: phones[0],
   secondaryPhoneDisplay: phones[1],
   phones,
   whatsappUrl: buildWhatsAppUrl(),
   floatingWhatsAppUrl: buildWhatsAppUrl(
-    "Ola, vim pela landing page da ATEB Solucoes e gostaria de conversar sobre a operacao da minha empresa."
+    "Olá, vim pela landing page da ATEB Soluções e gostaria de conversar sobre a operação da minha empresa."
+  ),
+  thankYouWhatsAppUrl: buildWhatsAppUrl(
+    "Olá, acabei de enviar meu contato pelo site da ATEB Soluções e gostaria de agilizar o atendimento."
   ),
   emails,
   address,
@@ -75,7 +80,7 @@ export const siteConfig = {
   businessHours,
   cnpj: "",
   defaultTitle:
-    "Consultoria TOTVS, Protheus, RM, Fluig e Sankhya | ATEB Solucoes",
+    "Consultoria TOTVS, Protheus, RM, Fluig e Sankhya | ATEB Soluções",
   defaultDescription:
     "Consultoria especializada em ERP TOTVS Protheus, TOTVS RM, Fluig e Sankhya para empresas que precisam automatizar processos, integrar sistemas e melhorar a performance operacional.",
   keywords: [
@@ -91,8 +96,8 @@ export const siteConfig = {
     "consultor Protheus",
     "consultor TOTVS",
     "parceiro TOTVS",
-    "integracao TOTVS",
-    "automacao de processos",
+    "integração TOTVS",
+    "automação de processos",
   ],
   navLinks: navigation,
   navigation,

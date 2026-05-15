@@ -2,9 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import { siteConfig } from "../config/siteConfig.js";
 
-const pageTitle = `Pagina nao encontrada | ${siteConfig.siteName}`;
+const pageTitle = `Página não encontrada | ${siteConfig.siteName}`;
 const pageDescription =
-  "A pagina que voce tentou acessar nao foi encontrada.";
+  "A página que você tentou acessar não foi encontrada.";
 ---
 
 <Layout title={pageTitle} description={pageDescription} robots="noindex, follow">
@@ -15,18 +15,18 @@ const pageDescription =
           <span class="ateb-kicker">Erro 404</span>
 
           <h1 class="ateb-section-title max-w-[10ch]">
-            Pagina nao encontrada
+            Página não encontrada
           </h1>
 
           <p class="ateb-section-text max-w-[58ch]">
-            O link acessado pode estar incorreto, desatualizado ou a pagina pode
-            ter sido movida. Voce pode voltar para a landing principal e seguir
-            a navegacao normalmente.
+            O link acessado pode estar incorreto, desatualizado ou a página pode
+            ter sido movida. Você pode voltar para a landing principal e seguir
+            a navegação normalmente.
           </p>
 
           <div class="flex flex-wrap gap-4">
             <a href={siteConfig.primaryRoute} class="ateb-button-primary">
-              Ir para a pagina principal
+              Ir para a página principal
             </a>
             <a
               href={siteConfig.whatsappUrl}
@@ -45,8 +45,8 @@ const pageDescription =
               404
             </p>
             <p class="mt-4 text-sm leading-7 text-[rgba(77,72,55,0.84)]">
-              Se quiser, voce tambem pode usar o menu principal ou acessar uma
-              das paginas legais no rodape.
+              Se quiser, você também pode usar o menu principal ou acessar uma
+              das páginas legais no rodapé.
             </p>
           </div>
         </div>

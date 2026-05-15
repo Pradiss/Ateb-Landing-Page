@@ -18,26 +18,44 @@ const contactSectionUrl = "#contato";
       <div class="relative grid gap-8 lg:grid-cols-[1fr_360px] lg:items-center">
         <div class="grid max-w-[760px] gap-4">
           <h2 class="font-sora text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-white">
-            Quer entender onde sua operacao pode melhorar?
+            Quer entender onde sua operação pode melhorar?
           </h2>
 
           <p class="max-w-[62ch] text-[1.03rem] leading-[1.75] text-white/76">
-            Fale com a ATEB Solucoes e solicite uma avaliacao inicial do seu
-            cenario. Vamos entender sua realidade e indicar o melhor caminho
+            Fale com a ATEB Soluções e solicite uma avaliação inicial do seu
+            cenário. Vamos entender sua realidade e indicar o melhor caminho
             para organizar, automatizar e integrar seus processos.
           </p>
 
           <div class="flex flex-wrap gap-4 pt-2">
-            <a
-              href={contactSectionUrl}
-              class="inline-flex min-h-[3.35rem] w-full items-center justify-center rounded-full bg-ateb-lime px-7 py-3.5 text-center text-sm font-extrabold text-ateb-dark shadow-[0_18px_35px_rgba(179,209,51,0.25)] transition hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(179,209,51,0.34)] sm:w-auto"
-            >
-              Solicitar diagnostico estrategico
+            <a href={contactSectionUrl} class="ateb-button-accent">
+              Solicitar diagnóstico estratégico
             </a>
           </div>
 
-          <p class="text-xs font-semibold leading-5 text-white/55">
-            Atendimento consultivo para empresas em todo o Brasil.
+          <p
+            class="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/55 lg:justify-start"
+          >
+            <span aria-hidden="true"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1000 700"
+                class="h-4 w-6 rounded-sm shadow-sm"
+                aria-hidden="true"
+              >
+                <rect width="1000" height="700" fill="#009b3a"></rect>
+                <polygon points="500,100 900,350 500,600 100,350" fill="#ffdf00"
+                ></polygon>
+                <circle cx="500" cy="350" r="140" fill="#002776"></circle>
+
+                <path
+                  d="M360 330c40-25 90-40 140-40s100 15 140 40"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="28"></path>
+              </svg></span
+            >
+            Atendimento para empresas em todo o Brasil.
           </p>
         </div>
 
@@ -49,7 +67,7 @@ const contactSectionUrl = "#contato";
 
           <img
             src="/images/home-about.webp"
-            alt="Equipe em reuniao avaliando indicadores"
+            alt="Equipe em reunião avaliando indicadores"
             loading="lazy"
             class="relative ml-auto h-[360px] w-full rounded-[1.6rem] object-cover shadow-[0_24px_55px_rgba(0,0,0,0.28)]"
           />

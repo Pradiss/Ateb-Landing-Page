@@ -20,39 +20,84 @@ const contactSectionUrl = "#contato";
         <h1
           class="font-sora mx-auto max-w-[18ch] text-[clamp(2rem,5vw,4rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark lg:mx-0"
         >
-          Consultoria em ERP para transformar processos em performance
+          Consultoria em ERP
+
+          <span
+            class="mt-4 flex flex-wrap items-center justify-center gap-4 lg:justify-start"
+          >
+            <img
+              src="/Logo/TOTVS.webp"
+              alt="TOTVS"
+              class="h-12 w-auto object-contain brightness-0 md:h-14 lg:h-16"
+            />
+
+            <span
+              class="text-[clamp(1.8rem,4vw,3.4rem)] font-extrabold text-ateb-dark"
+            >
+              e
+            </span>
+
+            <img
+              src="/Logo/Sankhya-logo.svg"
+              alt="Sankhya"
+              class="h-12 w-auto object-contain brightness-0 md:h-14 lg:h-16"
+            />
+          </span>
         </h1>
+
+        <h3
+          class="font-sora mx-auto max-w-[22ch] text-[clamp(1.25rem,2.8vw,2rem)] font-bold leading-[1.16] tracking-[-0.04em] text-ateb-earth lg:mx-0"
+        >
+          RM, Protheus, Fluig ou Sankhya
+        </h3>
 
         <div class="mx-auto grid max-w-[680px] gap-4 lg:mx-0">
           <p
             class="text-[clamp(1rem,2.2vw,1.16rem)] leading-[1.7] text-[rgba(77,72,55,0.84)]"
           >
-            Sua empresa usa TOTVS RM, Protheus, Fluig ou Sankhya, mas ainda
-            enfrenta retrabalho, controles manuais ou processos pouco
-            integrados?
+            Sua empresa enfrenta retrabalho, controles manuais ou processos
+            pouco integrados?
           </p>
 
           <p
             class="text-[clamp(1rem,2.2vw,1.16rem)] leading-[1.7] text-[rgba(77,72,55,0.84)]"
           >
-            A ATEB Solucoes apoia empresas na consultoria, automacao e
-            integracao de sistemas ERP, com mais de 20 anos de experiencia para
-            gerar mais controle, produtividade e organizacao.
+            Consultoria, automação e integração de sistemas ERP, com mais de 20
+            anos de experiência para gerar mais controle, produtividade e
+            organização.
           </p>
         </div>
 
         <div
           class="flex w-full flex-wrap justify-center gap-4 pt-2 lg:justify-start"
         >
-          <a
-            href={contactSectionUrl}
-            class="inline-flex min-h-[3.35rem] w-full items-center justify-center rounded-full bg-ateb-lime px-7 py-3.5 text-center text-sm font-extrabold text-ateb-dark shadow-[0_18px_35px_rgba(179,209,51,0.25)] transition hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(179,209,51,0.34)] sm:w-auto"
-          >
-            Solicitar diagnostico estrategico
+          <a href={contactSectionUrl} class="ateb-button-accent">
+            Solicitar diagnóstico estratégico
           </a>
         </div>
 
-        <p class="text-sm font-semibold text-[rgba(77,72,55,0.72)]">
+        <p
+          class="inline-flex items-center justify-center gap-2 text-sm font-semibold text-[rgba(77,72,55,0.72)] lg:justify-start"
+        >
+          <span aria-hidden="true"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1000 700"
+              class="h-4 w-6 rounded-sm shadow-sm"
+              aria-hidden="true"
+            >
+              <rect width="1000" height="700" fill="#009b3a"></rect>
+              <polygon points="500,100 900,350 500,600 100,350" fill="#ffdf00"
+              ></polygon>
+              <circle cx="500" cy="350" r="140" fill="#002776"></circle>
+
+              <path
+                d="M360 330c40-25 90-40 140-40s100 15 140 40"
+                fill="none"
+                stroke="#fff"
+                stroke-width="28"></path>
+            </svg></span
+          >
           Atendimento para empresas em todo o Brasil.
         </p>
       </div>
@@ -71,11 +116,11 @@ const contactSectionUrl = "#contato";
         </div>
 
         <img
-          src="/images/hero.webp"
-          alt="Imagem institucional da ATEB Solucoes"
+          src="/images/background-hero.webp"
+          alt="Imagem institucional da ATEB Soluções"
           loading="eager"
           fetchpriority="high"
-          class="relative mx-auto h-auto w-full max-w-[520px] object-contain drop-shadow-[0_30px_50px_rgba(29,18,10,0.16)]"
+          class="relative mx-auto h-auto w-full max-w-[820px] object-contain drop-shadow-[0_30px_50px_rgba(29,18,10,0.16)]"
         />
       </div>
     </div>

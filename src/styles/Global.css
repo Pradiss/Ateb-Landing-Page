@@ -58,6 +58,12 @@
 }
 
 @layer components {
+  .ateb-button-primary,
+  .ateb-button-secondary,
+  .ateb-button-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-full text-center text-sm transition;
+  }
+
   .ateb-container {
     width: min(calc(100% - 2rem), 1300px);
     margin-inline: auto;
@@ -76,13 +82,38 @@
   }
 
   .ateb-button-primary {
-    @apply inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5;
+    @apply min-h-[3.25rem] px-6 py-3 font-bold text-white hover:-translate-y-0.5;
     background: linear-gradient(135deg, #4d4837 0%, #1d120a 100%);
     box-shadow: 0 18px 35px rgba(29, 18, 10, 0.16);
   }
 
   .ateb-button-secondary {
-    @apply inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-full border border-[rgba(77,72,55,0.14)] bg-white/90 px-6 py-3 text-sm font-bold text-ateb-dark transition hover:-translate-y-0.5 hover:border-ateb-lime/40 hover:bg-ateb-lime/10;
+    @apply min-h-[3.25rem] border border-[rgba(77,72,55,0.14)] bg-white/90 px-6 py-3 font-bold text-ateb-dark hover:-translate-y-0.5 hover:border-ateb-lime/40 hover:bg-ateb-lime/10;
+  }
+
+  .ateb-button-accent {
+    @apply min-h-[3.35rem] w-full bg-ateb-lime px-7 py-3.5 font-extrabold text-ateb-dark shadow-[0_18px_35px_rgba(179,209,51,0.25)] hover:-translate-y-1 hover:shadow-[0_24px_45px_rgba(179,209,51,0.34)] sm:w-auto;
+  }
+
+  .ateb-button-primary::after,
+  .ateb-button-secondary::after,
+  .ateb-button-accent::after {
+    content: "";
+    width: 1.125rem;
+    height: 1.125rem;
+    flex-shrink: 0;
+    background-color: currentColor;
+    transition: transform 180ms ease;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E")
+      center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E")
+      center / contain no-repeat;
+  }
+
+  .ateb-button-primary:hover::after,
+  .ateb-button-secondary:hover::after,
+  .ateb-button-accent:hover::after {
+    transform: translateX(0.15rem);
   }
 
   .ateb-kicker {

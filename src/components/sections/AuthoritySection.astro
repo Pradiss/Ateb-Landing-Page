@@ -1,4 +1,7 @@
 ---
+import { Clock, MapPin, TrendingUp, Settings } from "lucide-astro";
+
+
 const contactSectionUrl = "#contato";
 
 const authorityItems = [
@@ -6,103 +9,112 @@ const authorityItems = [
   "Consultoria TOTVS Protheus",
   "Consultoria TOTVS Fluig",
   "Consultoria Sankhya",
-  "Integracao entre ERP e outros sistemas",
-  "Automacao de processos manuais",
-  "Revitalizacao de sistemas ja implantados",
-  "Parametrizacao, customizacao e melhoria de rotinas",
-  "Gestao de processos e indicadores",
+  "Integração entre ERP e outros sistemas",
+  "Automação de processos manuais",
+  "Revitalização de sistemas já implantados",
+  "Parametrização, customização e melhoria de rotinas",
+  "Gestão de processos e indicadores",
 ];
+
 
 const highlightItems = [
   {
+    icon: Clock,
     title: "+20 anos",
-    text: "de experiencia em projetos, implantacao e consultoria ERP.",
+    text: "de experiência em projetos, implantação e consultoria ERP.",
   },
   {
+    icon: MapPin,
     title: "Atendimento nacional",
-    text: "para empresas de medio e grande porte em todo o Brasil.",
+    text: "para empresas de médio e grande porte em todo o Brasil.",
   },
   {
+    icon: TrendingUp,
     title: "Resultado pratico",
-    text: "com foco em organizacao, automacao e performance operacional.",
+    text: "com foco em organização, automação e performance operacional.",
   },
   {
+    icon: Settings,
     title: "TOTVS e Sankhya",
-    text: "atuacao em RM, Protheus, Fluig, Sankhya e integracoes.",
+    text: "atuação em RM, Protheus, Fluig, Sankhya e integrações.",
   },
 ];
+
 ---
 
-<section class="relative overflow-hidden py-[clamp(4rem,6vw,6rem)]" id="solucoes">
+<section
+  class="relative overflow-hidden py-[clamp(4rem,6vw,6rem)]"
+  id="solucoes"
+>
   <div
     class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(179,209,51,0.16),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.94),rgba(167,164,161,0.08))]"
     aria-hidden="true"
-  ></div>
+  >
+  </div>
 
   <div class="ateb-container relative grid gap-10">
-    <div class="mx-auto grid max-w-[860px] justify-items-center gap-4 text-center">
-      <h2 class="font-sora text-[clamp(1.9rem,3.6vw,3.35rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
-        Experiencia pratica para empresas que precisam ir alem do uso basico do ERP
+    <div
+      class="mx-auto grid max-w-[860px] justify-items-center gap-4 text-center"
+    >
+      <h2
+        class="font-sora text-[clamp(1.9rem,3.6vw,3.35rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark"
+      >
+        Experiência prática para empresas que precisam ir além do uso básico do
+        ERP
       </h2>
 
-      <p class="max-w-[760px] text-[1.05rem] leading-[1.75] text-[rgba(77,72,55,0.84)]">
-        A ATEB Solucoes atua com uma visao consultiva: antes de propor qualquer
-        melhoria, entendemos o cenario da empresa, os processos atuais, os
-        gargalos da operacao e a forma como o ERP esta sendo utilizado.
+      <p
+        class="max-w-[760px] text-[1.05rem] leading-[1.75] text-[rgba(77,72,55,0.84)]"
+      >
+        A ATEB Soluções atua com uma visão consultiva: antes de propor qualquer
+        melhoria, entendemos o cenário da empresa, os processos atuais, os
+        gargalos da operação e a forma como o ERP está sendo utilizado.
       </p>
     </div>
 
-    <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-      <div class="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#4d4837_0%,#1d120a_100%)] p-7 text-white shadow-[0_24px_60px_rgba(29,18,10,0.16)] lg:p-8">
+    <div
+      class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] flex justify-center items-center"
+    >
+      <div
+        class="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#4d4837_0%,#1d120a_100%)] p-7 text-white shadow-[0_24px_60px_rgba(29,18,10,0.16)] lg:p-8"
+      >
         <div
           class="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-ateb-lime/20 blur-3xl"
           aria-hidden="true"
-        ></div>
+        >
+        </div>
 
         <div
           class="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-white/10 blur-3xl"
           aria-hidden="true"
-        ></div>
+        >
+        </div>
 
         <div class="relative flex min-h-full flex-col justify-between gap-10">
           <div class="grid gap-4">
-            <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-white/60">
-              Atuacao consultiva
+            <p
+              class="text-xs font-extrabold uppercase tracking-[0.16em] text-white/60"
+            >
+              Atuação consultiva
             </p>
 
-            <h3 class="font-sora text-[clamp(1.75rem,3.2vw,2.8rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-white">
-              Antes de configurar o sistema, entendemos a operacao.
+            <h3
+              class="font-sora text-[clamp(1.75rem,3.2vw,2.8rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-white"
+            >
+              Antes de configurar o sistema, entendemos a operação.
             </h3>
 
             <div class="grid gap-4">
               <p class="text-[1rem] leading-7 text-white/76">
-                Nossa atuacao e indicada para empresas que precisam de mais controle,
-                integracao, automacao e aderencia do sistema a realidade do negocio.
+                Nossa atuação é indicada para empresas que precisam de mais
+                controle, integração, automação e aderência do sistema à
+                realidade do negócio.
               </p>
 
               <p class="text-sm leading-7 text-white/64">
-                A analise considera processos, pessoas, dados, integracoes e gargalos
-                reais para definir melhorias que facam sentido para o negocio.
-              </p>
-            </div>
-          </div>
-
-          <div class="mt-auto grid grid-cols-2 gap-3">
-            <div class="rounded-[1.25rem] border border-white/10 bg-white/10 p-4">
-              <p class="font-sora text-3xl font-extrabold tracking-[-0.06em] text-ateb-lime">
-                +20
-              </p>
-              <p class="mt-1 text-xs font-semibold leading-5 text-white/70">
-                anos de experiencia
-              </p>
-            </div>
-
-            <div class="rounded-[1.25rem] border border-white/10 bg-white/10 p-4">
-              <p class="font-sora text-3xl font-extrabold tracking-[-0.06em] text-ateb-lime">
-                ERP
-              </p>
-              <p class="mt-1 text-xs font-semibold leading-5 text-white/70">
-                processos, automacao e integracao
+                A análise considera processos, pessoas, dados, integrações e
+                gargalos reais para definir melhorias que façam sentido para o
+                negócio.
               </p>
             </div>
           </div>
@@ -111,44 +123,56 @@ const highlightItems = [
 
       <div class="grid gap-5">
         <div class="grid gap-4 sm:grid-cols-2">
-          {highlightItems.map((item) => (
-            <article class="group relative overflow-hidden rounded-[1.5rem] border border-[rgba(77,72,55,0.12)] bg-white/92 p-5 shadow-[0_18px_45px_rgba(29,18,10,0.06)] backdrop-blur-xl transition duration-200 hover:-translate-y-1 hover:shadow-[0_26px_60px_rgba(29,18,10,0.10)]">
-              <div
-                class="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-ateb-lime/15 blur-2xl transition group-hover:bg-ateb-lime/25"
-                aria-hidden="true"
-              ></div>
+          {
+            highlightItems.map((item) => (
+              <article class="group relative overflow-hidden rounded-[1.5rem] border border-[rgba(77,72,55,0.12)] bg-white/92 p-5 shadow-[0_18px_45px_rgba(29,18,10,0.06)] backdrop-blur-xl transition duration-200 hover:-translate-y-1 hover:shadow-[0_26px_60px_rgba(29,18,10,0.10)]">
+                <div
+                  class="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-ateb-lime/15 blur-2xl transition group-hover:bg-ateb-lime/25"
+                  aria-hidden="true"
+                />
 
-              <div class="relative grid gap-2">
-                <p class="font-sora text-[1.25rem] font-extrabold leading-tight tracking-[-0.04em] text-ateb-dark">
-                  {item.title}
-                </p>
+                <div class="relative grid gap-3">
+                  <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-ateb-lime/18 text-ateb-earth ring-1 ring-ateb-lime/25">
+                    <item.icon size={22} strokeWidth={2.2} />
+                  </div>
 
-                <p class="text-sm leading-6 text-[rgba(77,72,55,0.78)]">
-                  {item.text}
-                </p>
-              </div>
+                  <p class="font-sora text-[1.25rem] font-extrabold leading-tight tracking-[-0.04em] text-ateb-dark">
+                    {item.title}
+                  </p>
 
-              <span class="absolute inset-x-5 bottom-0 h-1 rounded-full bg-[linear-gradient(90deg,#b3d133,#4d4837)] opacity-0 transition group-hover:opacity-100"></span>
-            </article>
-          ))}
+                  <p class="text-sm leading-6 text-[rgba(77,72,55,0.78)]">
+                    {item.text}
+                  </p>
+                </div>
+
+                <span class="absolute inset-x-5 bottom-0 h-1 rounded-full bg-[linear-gradient(90deg,#b3d133,#4d4837)] opacity-0 transition opacity-100" />
+              </article>
+            ))
+          }
         </div>
 
-        <div class="rounded-[1.7rem] border border-[rgba(77,72,55,0.12)] bg-white/92 p-6 shadow-[0_18px_40px_rgba(29,18,10,0.06)] backdrop-blur-xl">
-          <h3 class="font-sora text-[1.3rem] font-bold leading-tight tracking-[-0.04em] text-ateb-dark">
+       
+      </div>
+      
+    </div>
+     <div
+          class="rounded-[1.7rem] border border-[rgba(77,72,55,0.12)] bg-white/92 p-6 shadow-[0_18px_40px_rgba(29,18,10,0.06)] backdrop-blur-xl"
+        >
+          <h3
+            class="font-sora text-[1.3rem] font-bold leading-tight tracking-[-0.04em] text-ateb-dark"
+          >
             Frentes em que a consultoria pode apoiar
           </h3>
 
           <div class="mt-5 flex flex-wrap gap-3">
-            {authorityItems.map((item) => (
-              <span class="inline-flex min-h-9 items-center rounded-full bg-ateb-lime/15 px-4 py-2 text-sm font-bold text-ateb-earth">
-                {item}
-              </span>
-            ))}
+            {
+              authorityItems.map((item) => (
+                <span class="inline-flex min-h-9 items-center rounded-full bg-ateb-lime/15 px-4 py-2 text-[13px] font-bold text-ateb-earth">
+                  {item}
+                </span>
+              ))
+            }
           </div>
         </div>
-      </div>
-    </div>
-
-    
   </div>
 </section>

@@ -1,5 +1,8 @@
 ---
-const contactEmail = "laise.longatto@atebsolucoes.com.br";
+import { siteConfig } from "../../config/siteConfig.js";
+
+const contactEmail = siteConfig.emails[0];
+const thankYouUrl = siteConfig.thankYouRoute;
 ---
 
 <section class="ateb-section pb-20" id="contato">
@@ -16,12 +19,12 @@ const contactEmail = "laise.longatto@atebsolucoes.com.br";
       <div class="relative flex min-h-full items-center justify-center overflow-hidden rounded-[2rem] p-7 text-center lg:p-8 lg:text-left">
         <div class="relative grid max-w-[520px] gap-4 lg:mx-0">
           <h2 class="font-sora text-[clamp(2rem,4vw,3.15rem)] font-extrabold leading-[1.06] tracking-[-0.06em] text-ateb-dark">
-            Vamos avaliar o cenario da sua empresa?
+            Vamos avaliar o cenário da sua empresa?
           </h2>
 
           <p class="text-[1rem] leading-7 text-[rgba(77,72,55,0.84)]">
-            Preencha o formulario para entender como a ATEB pode ajudar sua
-            operacao a ganhar mais eficiencia, controle e performance.
+            Preencha o formulário para entender como a ATEB pode ajudar sua
+            operação a ganhar mais eficiência, controle e performance.
           </p>
         </div>
       </div>
@@ -40,11 +43,11 @@ const contactEmail = "laise.longatto@atebsolucoes.com.br";
         <h3
           class="font-sora text-[1.55rem] font-extrabold tracking-[-0.05em] text-ateb-dark"
         >
-          Conte sobre sua operacao
+          Conte sobre sua operação
         </h3>
 
         <p class="text-sm leading-6 text-[rgba(77,72,55,0.72)]">
-          Envie seus dados e a mensagem sera organizada automaticamente para o
+          Envie seus dados e a mensagem será organizada automaticamente para o
           e-mail da ATEB: {contactEmail}.
         </p>
       </div>
@@ -110,8 +113,8 @@ const contactEmail = "laise.longatto@atebsolucoes.com.br";
             <option>TOTVS Protheus</option>
             <option>TOTVS Fluig</option>
             <option>Sankhya</option>
-            <option>Integracao entre sistemas</option>
-            <option>Automacao de processos</option>
+            <option>Integração entre sistemas</option>
+            <option>Automação de processos</option>
             <option>Outro</option>
           </select>
         </label>
@@ -121,13 +124,13 @@ const contactEmail = "laise.longatto@atebsolucoes.com.br";
           <textarea
             class="ateb-textarea min-h-[140px]"
             name="mensagem"
-            placeholder="Conte um pouco sobre o cenario atual, dores ou objetivos da sua operacao."
+            placeholder="Conte um pouco sobre o cenário atual, dores ou objetivos da sua operação."
           ></textarea>
         </label>
 
         <div class="flex flex-wrap gap-4 pt-2">
           <button type="submit" class="ateb-button-primary">
-            Solicitar diagnostico
+            Solicitar diagnóstico
           </button>
         </div>
       </form>
@@ -135,7 +138,7 @@ const contactEmail = "laise.longatto@atebsolucoes.com.br";
   </div>
 </section>
 
-<script define:vars={{ contactEmail }}>
+<script define:vars={{ contactEmail, thankYouUrl }}>
   const form = document.querySelector("[data-email-form]");
 
   form?.addEventListener("submit", (event) => {
@@ -164,6 +167,16 @@ const contactEmail = "laise.longatto@atebsolucoes.com.br";
       ? `Solicitacao de diagnostico - ${company}`
       : "Solicitacao de diagnostico - Landing page ATEB";
 
-    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    const mailtoLink = document.createElement("a");
+    mailtoLink.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    mailtoLink.style.display = "none";
+
+    document.body.appendChild(mailtoLink);
+    mailtoLink.click();
+    mailtoLink.remove();
+
+    window.setTimeout(() => {
+      window.location.assign(thankYouUrl);
+    }, 250);
   });
 </script>
