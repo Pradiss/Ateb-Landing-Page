@@ -1,23 +1,38 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/sections/Hero.astro";
+import AuthoritySection from "../components/sections/AuthoritySection.astro";
+import PainSection from "../components/sections/PainSection.astro";
+import SolutionSection from "../components/sections/SolutionSection.astro";
+import ServicesSection from "../components/sections/ServicesSection.astro";
+import CasesSection from "../components/sections/CasesSection.astro";
+import BenefitsSection from "../components/sections/BenefitsSection.astro";
+import AudienceSection from "../components/sections/AudienceSection.astro";
+import StepsSection from "../components/sections/StepsSection.astro";
+import DifferentialsSection from "../components/sections/DifferentialsSection.astro";
+import CtaSection from "../components/sections/CtaSection.astro";
+import FaqSection from "../components/sections/FaqSection.astro";
+import ContactSection from "../components/sections/ContactSection.astro";
 import { siteConfig } from "../config/siteConfig.js";
 ---
 
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="refresh" content={`0; url=${siteConfig.primaryRoute}`} />
-    <meta name="robots" content="noindex, follow" />
-    <title>Redirecionando...</title>
-    <script define:vars={{ primaryRoute: siteConfig.primaryRoute }}>
-      window.location.replace(primaryRoute);
-    </script>
-  </head>
-  <body>
-    <p>
-      Redirecionando para
-      <a href={siteConfig.primaryRoute}>{siteConfig.primaryRoute}</a>.
-    </p>
-  </body>
-</html>
+<Layout
+  title={siteConfig.defaultTitle}
+  description={siteConfig.defaultDescription}
+>
+  <main>
+    <Hero />
+    <AuthoritySection />
+    <PainSection />
+    <SolutionSection />
+    <ServicesSection />
+    <CasesSection />
+    <BenefitsSection />
+    <AudienceSection />
+    <StepsSection />
+    <DifferentialsSection />
+    <CtaSection />
+    <FaqSection />
+    <ContactSection />
+  </main>
+</Layout>

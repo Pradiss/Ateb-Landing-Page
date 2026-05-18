@@ -1,6 +1,6 @@
 const whatsappNumber = "5519981112786";
 const businessName = "ATEB Soluções";
-const primaryRoute = "/consultoria-totvs-protheus-rm-fluig-sankhya";
+const primaryRoute = "/";
 const thankYouRoute = "/obrigado";
 const phones = ["(19) 98111-2786", "(19) 99922-1978"];
 const emails = [
